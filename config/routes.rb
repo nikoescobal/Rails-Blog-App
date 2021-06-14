@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :articles_controllers
   resources :articles
   devise_for :users
   # root to: "article#index"
