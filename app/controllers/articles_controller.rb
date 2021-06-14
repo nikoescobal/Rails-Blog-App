@@ -51,9 +51,8 @@ class ArticlesController < ApplicationController
 
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
-    example = {title: "Hello", text:"Fun times", image:"lolfactory.png"}
     respond_to do |format|
-      if @article.update(example)
+      if @article.update(article_params)
         format.html { redirect_to @article, notice: "Article was successfully updated." }
         format.json { render :show, status: :ok, location: @article }
       else
