@@ -1,17 +1,14 @@
-<%= form_with(model: article) do |form| %>
-  <% if article.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+<%= form_with(model: article, local: true) do |f| %>
+    <%= render 'shared/errors', object: article %>
+  <%= f.label :title %>
+  <%= f.text_field :title, autofocus: true %>
 
-      <ul>
-        <% article.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= f.label :text %>
+  <%= f.text_field :text, rows: 7 %>
+  
+  <%= f.label :image %>
+  <%= f.text_field :image %>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= f.submit %>
+
 <% end %>
