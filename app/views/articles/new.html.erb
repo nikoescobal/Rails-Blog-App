@@ -1,12 +1,6 @@
-<h1>New Article</h1>
+<h1>Create A New Article</h1>
 
-<%= form_with(model: @article, local: true) do |f| %>
+<%= render 'form', article: @article %>
 
-  <%= f.label :title %>
-  <%= f.text_field :title, autofocus: true %>
-
-  <%= f.submit %>
-
-<% end %>
-
+<%= link_to 'Show', @article %> 
 <%= link_to 'Back', articles_path %>

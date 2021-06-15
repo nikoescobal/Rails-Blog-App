@@ -1,5 +1,5 @@
 <%= form_with(model: article, local: true) do |f| %>
-    <%= render 'shared/errors', object: article %>
+<%= render 'shared/errors', object: article %>
   <%= f.label :title %>
   <%= f.text_field :title, autofocus: true %>
 

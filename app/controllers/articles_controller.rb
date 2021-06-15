@@ -8,12 +8,11 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1 or /articles/1.json
   def show
-    @article = Article.find(params[:id])
   end
 
   # GET /articles/new
   def new
-    @article = Article.new
+    @article = current_user.articles.build
   end
 
   # GET /articles/1/edit
@@ -24,21 +23,7 @@ class ArticlesController < ApplicationController
   # POST /articles or /articles.json
   def create
 
-    # @article = current_user.articles.new(article_params)
-
-    example = {user_id: current_user.id, title: article_params[:title], text:"Fun times", image:"lolfactory.png"}
-
-    # print article_params
-
-
-    # @article = current_user.article.build(article_params)
-
-    # params.article = {user_id: current_user.id, title:"Lol factory", text:"Fun times", image:"lolfactory.png"}
-    # params.article.user_id = current_user.id
-    # params.article.title = "Lol factory"
-    # params.article.text = "Fun times"
-    # params.article.image = "Lolfactory.png"
-    @article = Article.new(example)
+    @article = current_user.articles.build(article_params)
 
     respond_to do |format|
       if @article.save
