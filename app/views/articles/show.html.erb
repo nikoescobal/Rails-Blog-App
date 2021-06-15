@@ -2,3 +2,29 @@
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
+
+<div class="details">
+
+<h1><%= @article.title %></h1>
+<table>
+  <tr>
+    <th>Title</th>
+    <td><%= @article.title %></td>
+  </tr>
+  <tr>
+    <th>Text</th>
+    <td><%= @article.text %></td>
+  </tr>
+  <tr>
+    <th>Image</th>
+    <td><%= @article.image %></td>
+  </tr>
+</table>
+
+</div>
+
+<section class="admin">
+  <%= link_to 'Edit', edit_article_path(@article), class: "button" %>
+  <%= link_to 'Delete', @article, class: "button", method: :delete,
+                        data: { confirm: "Are you sure?" } %>
+</section>
