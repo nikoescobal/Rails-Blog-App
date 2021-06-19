@@ -12,7 +12,13 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-    @article = current_user.articles.build
+        
+      if user_signed_in?
+        @article = current_user.articles.build    
+      else
+        redirect_to new_user_registration_path
+      end
+    
   end
 
   # GET /articles/1/edit
