@@ -5,6 +5,14 @@
 
 <div class="details">
 
+ <% if @vote_exist %>
+ <%= link_to image_tag("logo-1"), votes_path(@article) %>
+ <% else %>
+ <%= link_to image_tag("logo-2"), votes_path(@article) %>
+ <% end %>
+                   
+
+
 <h1><%= @article.title %></h1>
 <table>
   <tr>

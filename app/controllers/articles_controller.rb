@@ -4,10 +4,25 @@ class ArticlesController < ApplicationController
   # GET /articles or /articles.json
   def index
     @articles = Article.order(:vote_count)
+    @vote_exist = []
+    @articles.each do |article|
+      if Vote.where(user_id: current_user.id, article_id: article.id).count > 0
+        @vote_exist << true
+      else
+        @vote_exist << false
+      end
+    end
   end
 
   # GET /articles/1 or /articles/1.json
   def show
+    @vote_exist = true
+    @a_params = (params[:id])
+    if Vote.where(user_id: current_user.id, article_id: params[:id]).count > 0
+      @vote_exist = true
+    else
+      @vote_exist = false
+    end
   end
 
   # GET /articles/new
@@ -20,8 +35,12 @@ class ArticlesController < ApplicationController
   end
 
   def votes
-    article = Article.find(params[:id])
-    vote = votes.new(user_id:current_user.id, article_id:article(params[:id])
+    votes = Vote.new(user_id:current_user.id, article_id:params[:id])
+    if votes.valid?
+      votes.save
+      Article.increment_counter(:vote_count, params[:id])
+    end
+    redirect_back(fallback_location: root_path)
   end
 
   # GET /articles/1/edit
