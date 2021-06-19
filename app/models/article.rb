@@ -8,7 +8,7 @@ class Article < ApplicationRecord
   validates :title, :image, presence: true
   validates :text, length: { minimum: 15 }
   validates :image, format: {
-    with: /\w+\.(jpg|png)\z/i,
-    message: 'must be a JPG or PNG image'
+    with: /\w+\.(jpg|png|jpeg)\z/i,
+    message: 'must be a JPG, JPEG or PNG image'
   }
 end

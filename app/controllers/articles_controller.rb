@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles or /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.order(:vote_count)
   end
 
   # GET /articles/1 or /articles/1.json
@@ -12,13 +12,16 @@ class ArticlesController < ApplicationController
 
   # GET /articles/new
   def new
-        
-      if user_signed_in?
-        @article = current_user.articles.build    
-      else
+    if user_signed_in?
+        @article = current_user.articles.build
+    else
         redirect_to new_user_registration_path
-      end
-    
+    end
+  end
+
+  def votes
+    article = Article.find(params[:id])
+    vote = votes.new(user_id:current_user.id, article_id:article(params[:id])
   end
 
   # GET /articles/1/edit
@@ -28,6 +31,11 @@ class ArticlesController < ApplicationController
 
   # POST /articles or /articles.json
   def create
+    uploaded_io = article_params[:image]
+      File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+        params[:article][:image] = uploaded_io.original_filename
+      end
 
     @article = current_user.articles.build(article_params)
 
