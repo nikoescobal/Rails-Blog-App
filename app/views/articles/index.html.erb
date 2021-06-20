@@ -22,9 +22,10 @@
                   <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
                   <%= link_to 'New Article', new_article_path %>
                   <% if @vote_exist[index] %>
-                  <%= link_to image_tag("logo-1"), votes_path(article) %>
+                  .object-contain
+                  <%= link_to image_tag("logo-1", width: "3%"), votes_path(article) %>
                   <% else %>
-                  <%= link_to image_tag("logo-2"), votes_path(article) %>
+                  <%= link_to image_tag("logo-2", width: "3%"), votes_path(article) %>
                   <% end %>
                    
 								</p>
