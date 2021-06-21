@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   resources :articles
   # resources :votes, only [:index]
   devise_for :users
