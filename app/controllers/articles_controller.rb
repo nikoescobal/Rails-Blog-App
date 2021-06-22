@@ -5,12 +5,14 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.order(:vote_count)
     @vote_exist = []
+    if user_signed_in?
     @articles.each do |article|
       if Vote.where(user_id: current_user.id, article_id: article.id).count > 0
         @vote_exist << true
       else
         @vote_exist << false
       end
+    end
     end
   end
 
