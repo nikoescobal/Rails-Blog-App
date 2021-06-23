@@ -1,3 +1,4 @@
+<!-- 
 <header class="mb-4">
   <nav class="flex flex-wrap text-center items-center justify-between mt-6 text-gray-700 bg-white-100 lg:pl-6 lg:pr-10">
         <%= link_to "liFEsTlye", root_path, class:"link md:text-2l lg:text-3xl tracking-tight font-bold relative" %>
@@ -39,4 +40,59 @@
     </div>
   </nav>
 </header>
+-->
+
+<header>
+
+<!-- navbar goes here -->
+<nav class="bg-gray-100">
+  <div class="px-8 mx-auto border border-red-400">
+    <div class="flex justify-between">
+      <!-- logo -->
+      <div class="flex">
+        <div class="flex">
+
+          <%= link_to "liFEsTlye", root_path, class:"items-center md:text-sm lg:text-2xl tracking-tight font-bold" %>
+          <%= link_to image_tag("ovals"), root_path, class:"w-10 -ml-2 pt-2" %>
+        
+        
+        </div>
+
+        <!-- primary nav -->
+        <div>primary nav</div>
+      </div>
+
+
+      <!-- secondary nav -->
+      <div>secondary nav</div>
+    </div>
+      <!-- mobile menu -->
+  </div>
+</nav>
+
+<!-- content goes here -->
+
+<div class="py-32 text-center">
+  <h2 class="font-extrabold text-4xl">Navbars in Tailwind~</h2>
+</div>
+
+<!--
+<%= link_to "Home", articles_path, class: "flex gap-x-2 pl-3 mt-4 lg:inline-block lg:mt-0 lg:mr-4 mb-2 lg:mb-0 link text-orange-600" %>
+
+<% Category.all.each do |category| %>
+          <li class="first:text-orange-600 hover:text-orange-600 md:pr-3 pr-4">
+            <%= category.name %>
+<% end %>
+
+<% if user_signed_in? %>
+  <%= link_to "Edit account", edit_user_registration_path, class: "btn btn-default mb-2 lg:mr-2 lg:mb-0 block" %>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-default mb-2 lg:mb-0 block" %>
+<% else %>
+  <%= link_to "Login", new_user_session_path, class:"btn btn-default mb-2 lg:mr-2 lg:mb-0 block uppercase" %>
+  <%= link_to "Register", new_user_registration_path, class:"btn btn-default block uppercase" %>
+<% end %>
+ -->
+
+</header>
+
 
