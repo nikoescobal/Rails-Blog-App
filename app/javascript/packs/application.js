@@ -20,7 +20,8 @@ window.onload = function () {
   const menu = document.querySelector(".mobile-menu");
 
   a.addEventListener("click", () => {
-    menu.classList.remove("hidden");
+      menu.classList.toggle("hidden");
     console.log("Andy likes black dogs.")
     }); 
 };
+
