@@ -50,20 +50,20 @@
     <div class="flex justify-between">
       <!-- logo -->
         <div class="flex items-center">
-          <%= link_to "GetCultured", root_path, class:"hover:text-teal-700 items-center lg:text-2xl tracking-tighter font-mono text-teal-500 font-bold" %>
+          <%= link_to "GetCultured", root_path, class:"hover:text-teal-700 items-center lg:text-2xl tracking-tighter font-mono text-teal-500 font-bold transition duration-300" %>
           <%= link_to image_tag("idea"), root_path, class:"w-9 flex items-center -mt-3" %>
         </div>
 
         <!-- primary nav -->
 
       <div class="hidden md:flex flex items-center xl:pr-20  uppercase md:text-xs lg:text-sm space-x-4 font-mono">
-        <%= link_to "Home", articles_path, class: "font-mono md:text-xs lg:text-sm text-teal-500 hover:text-teal-700 uppercase" %>
+        <%= link_to "Home", articles_path, class: "font-bold font-mono md:text-xs lg:text-sm text-teal-600 hover:text-teal-500 bg-gray-200 hover:bg-gray-100 py-2 px-3 rounded shadow uppercase transition duration-300" %>
         <% @categories.each do |category| %>
           <div class="hover:text-blue-600">
             <%= link_to category.name, articles_path(@articles), class: "flex space-x-4" %>
           </div>
         <% end %>
-        </div>
+      </div>
       
 
       <!-- secondary nav -->
@@ -94,8 +94,6 @@
       </div>
     </div>
 
-
-
       <!-- mobile menu -->
       <div class="mobile-menu md:hidden">
         <%= link_to image_tag("menu"), root_path, class:"h-8 w-10 flex items-center" %>
@@ -103,6 +101,19 @@
 
 
   </div>
+
+ <!-- mobile menu -->
+      <div class="mobile-menu md:hidden">
+        <div class="block uppercase text-xs font-mono">
+        <%= link_to "Home", articles_path, class: "font-bold block hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1" %>
+        <% @categories.each do |category| %>
+          <div class="block hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1">
+            <%= link_to category.name, articles_path(@articles), class: "flex space-x-4" %>
+          </div>
+        <% end %>
+      </div>
+      </div>
+
 </nav>
 
 <!-- content goes here -->
