@@ -46,43 +46,62 @@
 
 <!-- navbar goes here -->
 <nav class="bg-gray-100">
-  <div class="px-6 pt-6 pb-7 mx-auto">
+  <div class="px-8 pt-6 pb-7 mx-auto">
     <div class="flex justify-between">
       <!-- logo -->
-      <div class="flex space-x-4 items-center">
-        <div class="flex">
-          <%= link_to "liFEsTlye", root_path, class:"items-center text-2xl tracking-wide font-bold" %>
-          <%= link_to image_tag("ovals"), root_path, class:"w-9 flex items-center -ml-2 pt-2" %>
+        <div class="flex items-center">
+          <%= link_to "GetCultured", root_path, class:"hover:text-teal-700 items-center lg:text-2xl tracking-tighter font-mono text-teal-500 font-bold" %>
+          <%= link_to image_tag("idea"), root_path, class:"w-9 flex items-center -mt-3" %>
         </div>
 
         <!-- primary nav -->
-        <%= link_to "Home", articles_path, class: "text-sm text-orange-600 hover:text-orange-400 uppercase" %>
 
-      <div class="flex items-center text-center uppercase text-sm space-x-2">
+      <div class="hidden md:flex flex items-center xl:pr-20  uppercase md:text-xs lg:text-sm space-x-4 font-mono">
+        <%= link_to "Home", articles_path, class: "font-mono md:text-xs lg:text-sm text-teal-500 hover:text-teal-700 uppercase" %>
         <% @categories.each do |category| %>
-          <div class="hover:text-orange-600">
+          <div class="hover:text-blue-600">
             <%= link_to category.name, articles_path(@articles), class: "flex space-x-4" %>
           </div>
         <% end %>
         </div>
-      </div>
+      
 
       <!-- secondary nav -->
-      <div class="flex items-center text-sm uppercase">
-        <div class="flex">
+      <div class="hidden md:flex flex items-center space-x-3 md:text-xs lg:text-sm uppercase font-mono">
+        <div class="flex space-x-2 items-center md:text-xs lg:text-sm">
           <% if user_signed_in? %>
-            <%= link_to "Edit account", edit_user_registration_path, class: "btn btn-default mb-2 lg:mr-2 lg:mb-0 block hover:text-orange-600" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-default mb-2 lg:mb-0 block hover:text-orange-600" %>
+          <div class="py-2 px-3 bg-teal-400 hover:bg-teal-300 text-teal-900 hover:text-teal-800 rounded shadow transition duration-300">
+            <%= link_to "Edit account", edit_user_registration_path, class: "btn btn-default hover:text-blue-600" %>
+          </div>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-default hover:text-blue-600" %>
         </div>
           <% else %>
-        <div class="flex">
-            <%= link_to "Login", new_user_session_path, class:"btn btn-default mb-2 lg:mr-2 lg:mb-0 block hover:text-orange-600" %>
-            <%= link_to "Register", new_user_registration_path, class:"btn btn-default block hover:text-orange-600" %>
+        <div class="flex space-x-2 items-center md:text-xs lg:text-sm">
+          <div class="py-2 px-3 bg-teal-400 hover:bg-teal-300 text-teal-900 hover:text-teal-800 rounded shadow transition duration-300 md:text-xs lg:text-sm">
+            <%= link_to "Login", new_user_session_path, class:"btn btn-default hover:text-blue-600" %>
+          </div>
+            <%= link_to "Register", new_user_registration_path, class:"btn btn-default hover:text-blue-600" %>
           <% end %>  
         </div>
+
+          <div class="md:hidden flex items-center">
+            mobile button goes here
+            <button class="mobile-menu-button">
+              <%= link_to image_tag("menu"), root_path, class:"h-6 w-16 flex items-center -mt-3" %>
+            </button>
+          </div>
+
       </div>
     </div>
+
+
+
       <!-- mobile menu -->
+      <div class="mobile-menu md:hidden">
+        <%= link_to image_tag("menu"), root_path, class:"h-8 w-10 flex items-center" %>
+      </div>
+
+
   </div>
 </nav>
 
