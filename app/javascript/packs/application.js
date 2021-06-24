@@ -13,3 +13,14 @@ import "stylesheets/application"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+window.onload = function () {
+  let a = document.getElementsByClassName('mobile-menu-button')[0]
+
+  const menu = document.querySelector(".mobile-menu");
+
+  a.addEventListener("click", () => {
+    menu.classList.remove("hidden");
+    console.log("Andy likes black dogs.")
+    }); 
+};

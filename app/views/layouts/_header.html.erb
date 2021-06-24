@@ -84,30 +84,25 @@
           <% end %>  
         </div>
 
-          <div class="md:hidden flex items-center">
-            mobile button goes here
-            <button class="mobile-menu-button">
-              <%= link_to image_tag("menu"), root_path, class:"h-6 w-16 flex items-center -mt-3" %>
-            </button>
-          </div>
-
       </div>
     </div>
 
       <!-- mobile menu -->
-      <div class="mobile-menu md:hidden">
-        <%= link_to image_tag("menu"), root_path, class:"h-8 w-10 flex items-center" %>
-      </div>
+      <div class="md:hidden flex items-center">
+        <button class="mobile-menu-button">
+          <%= link_to image_tag("menu"), root_path, class:"menu-img h-8 w-10 flex items-center" %>
+        </button>
 
+      </div>
 
   </div>
 
  <!-- mobile menu -->
-      <div class="mobile-menu md:hidden">
+      <div class="mobile-menu hidden md:hidden">
         <div class="block uppercase text-xs font-mono">
-        <%= link_to "Home", articles_path, class: "font-bold block hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1" %>
+        <%= link_to "Home", articles_path, class: "font-bold block hover:bg-gray-200 hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1" %>
         <% @categories.each do |category| %>
-          <div class="block hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1">
+          <div class="block hover:bg-gray-200 hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1">
             <%= link_to category.name, articles_path(@articles), class: "flex space-x-4" %>
           </div>
         <% end %>
