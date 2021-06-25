@@ -1,46 +1,23 @@
-<!--
+<p id="notice"><%= notice %></p>      
+    
+<div class="grid grid-cols-4 first:row-2 first:col-4">
+<div v-for="#{article} in #{articles}", class="w-full bg-red-400" >
+<% @articles.each_with_index do |article, index| %>
 
-<p id="notice"><%= notice %></p>
-      
-      
-				<div class="flex flex-wrap justify-between pt-5 -mx-6">
+<img src="/uploads/<%= article.image %>" class="h-64 w-full object-cover">
+    <%= article.title %>
+    <%= truncate(article.text, length: 30, separator: ' ') %>
+    <%= article.user.username %>
+    <%= link_to 'Read More', article %>
+    <%= link_to 'Edit', edit_article_path(article) %>
+    <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to 'New Article', new_article_path %>
+    <% if @vote_exist[index] %>
+      <%= link_to image_tag("logo-1", width: "3%"), votes_path(article) %>
+    <% else %>
+      <%= link_to image_tag("logo-2", width: "3%"), votes_path(article) %>
+    <% end %>
+  <% end %>
+      </div>
 
-        <% @articles.each_with_index do |article, index| %>
-
-					<div class="w-full md:w-1/4 flex-1 flex-col flex-grow flex-shrink">
-						<div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow-lg">
-							<a href="#" class="flex flex-wrap no-underline hover:no-underline">
-								<img src="/uploads/<%= article.image %>" class="h-64 w-full rounded-t pb-6 object-cover">
-								<p class="w-full text-gray-600 text-xs md:text-sm px-6">GETTING STARTED</p>
-								<div class="w-full font-bold text-xl text-gray-900 px-6"><%= article.title %></div>
-								<p class="text-gray-800 font-serif text-base px-6 mb-5">
-                  <%= truncate(article.text, length: 30, separator: ' ') %>
-									<%= article.user.username %>
-                  <%= link_to 'Read More', article %>
-                  <%= link_to 'Edit', edit_article_path(article) %>
-                  <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
-                  <%= link_to 'New Article', new_article_path %>
-                  <% if @vote_exist[index] %>
-                  .object-contain
-                  <%= link_to image_tag("logo-1", width: "3%"), votes_path(article) %>
-                  <% else %>
-                  <%= link_to image_tag("logo-2", width: "3%"), votes_path(article) %>
-                  <% end %>
-                   
-								</p>
-							</a>
-						</div>
-
-						<div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow-lg p-6">
-							<div class="flex items-center justify-between">
-								<img class="w-8 h-8 rounded-full mr-4 avatar" data-tippy-content="Author Name" src="http://i.pravatar.cc/300" alt="Avatar of Author">
-								<p class="text-gray-600 text-xs md:text-sm">1 MIN READ</p>
-							</div>
-						</div>
-
-					</div>
-        <% end %>
-				</div>
-      
-
- -->
+</div>
