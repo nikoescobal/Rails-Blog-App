@@ -1,10 +1,11 @@
 <p id="notice"><%= notice %></p>      
     
-<div class="grid grid-cols-4 first:row-2 first:col-4">
-<div v-for="#{article} in #{articles}", class="w-full bg-red-400" >
-<% @articles.each_with_index do |article, index| %>
+<div class="grid grid-cols-4 grid-rows-2 bg-gray-300">
 
-<img src="/uploads/<%= article.image %>" class="h-64 w-full object-cover">
+<% @articles.each_with_index do |article, index| %>
+<div class="w-full first:row-span-4 col-span-2">
+  <img src="/uploads/<%= article.image %>" class="h-64 w-full object-cover">
+</div>
     <%= article.title %>
     <%= truncate(article.text, length: 30, separator: ' ') %>
     <%= article.user.username %>
@@ -12,12 +13,9 @@
     <%= link_to 'Edit', edit_article_path(article) %>
     <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %>
     <%= link_to 'New Article', new_article_path %>
-    <% if @vote_exist[index] %>
-      <%= link_to image_tag("logo-1", width: "3%"), votes_path(article) %>
-    <% else %>
-      <%= link_to image_tag("logo-2", width: "3%"), votes_path(article) %>
-    <% end %>
   <% end %>
-      </div>
+      
 
 </div>
+
+
