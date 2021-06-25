@@ -21,7 +21,6 @@ window.onload = function () {
 
   a.addEventListener("click", () => {
       menu.classList.toggle("hidden");
-    console.log("Andy likes black dogs.")
     }); 
 };
 
