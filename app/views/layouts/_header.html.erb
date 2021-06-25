@@ -98,8 +98,8 @@
   </div>
 
  <!-- mobile menu -->
-      <div class="mobile-menu hidden md:hidden">
-        <div class="block uppercase text-xs font-mono">
+      <div class="mobile-menu hidden md:hidden transition duration-500 ease-in-out hover:bg-red-200 transform hover:-translate-y-1 hover:scale-120 mt-8 ">
+        <div class="animate-pulse block uppercase text-xs font-mono">
         <%= link_to "Home", articles_path, class: "font-bold block hover:bg-gray-200 hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1" %>
         <% @categories.each do |category| %>
           <div class="block hover:bg-gray-200 hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1">
