@@ -89,7 +89,7 @@
 
       <!-- mobile menu -->
       <div class="md:hidden flex items-center">
-        <button class="mobile-menu-button h-8 w-10 flex items-center">
+        <button class="mobile-menu-button h-8 w-10 flex items-center transition delay-150 duration-300 ease-in-out animate-pulse focus:outline-none">
           <%= image_tag("menu") %>
         </button>
 
@@ -98,11 +98,11 @@
   </div>
 
  <!-- mobile menu -->
-      <div class="mobile-menu hidden md:hidden transition duration-500 ease-in-out hover:bg-red-200 transform hover:-translate-y-1 hover:scale-120 mt-8 ">
-        <div class="animate-pulse block uppercase text-xs font-mono">
-        <%= link_to "Home", articles_path, class: "font-bold block hover:bg-gray-200 hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1" %>
+      <div class="mobile-menu hidden md:hidden transition duration-500 ease-in-out ">
+        <div class="block uppercase text-xs font-mono">
+        <%= link_to "Home", articles_path, class: "font-bold block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1" %>
         <% @categories.each do |category| %>
-          <div class="block hover:bg-gray-200 hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1">
+          <div class="block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 py-1">
             <%= link_to category.name, articles_path(@articles), class: "flex space-x-4" %>
           </div>
         <% end %>
