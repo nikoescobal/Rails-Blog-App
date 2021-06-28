@@ -1,28 +1,23 @@
 <p id="notice"><%= notice %></p>
 <div class="w-full h-96 border-bluegray-100">
-  <%= image_tag "/uploads/art.jpeg", class: "h-full w-full object-cover" %>
+  <%= image_tag "/uploads/art.jpeg", class: "h-full w-full bg-cover" %>
+  <img src="/uploads/<%= article.image %>" class="object-cover h-40 w-full" />
 </div>
 <div class="flex flex-row bg-gray-300 flex-wrap">
   <% @articles.each_with_index do |article, index| %>
-  <div class="w-1/4 h-full">
-    <img src="/uploads/<%= article.image %>" class="object-cover h-40 w-full" />
-    <div>
-      <h2><%= article.title %></h2>
-      <h3><%= truncate(article.text, length: 30, separator: ' ') %></h3>
-      <p><%= article.user.username %></p>
-      <p><%= link_to 'Read More', article %></p>
-      <p><%= link_to 'Edit', edit_article_path(article) %></p>
-      <p>
-        <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are
-        you sure?' } %>
-      </p>
-      <p><%= link_to 'New Article', new_article_path %></p>
+    <div class="w-1/4 h-full">
+      <img src="/uploads/<%= article.image %>" class="object-cover h-40 w-full" />
       <div>
-        <% if @vote_exist[index] %> <%= link_to image_tag("logo-1", width:
+        <h2><%= article.title %></h2>
+        <h3><%= truncate(article.text, length: 60, separator: ' ') %></h3>
+        <p>Author: <%= article.user.username %></p>
+        <p><%= link_to 'Read More', article %></p>
+        <div>
+          <% if @vote_exist[index] %> <%= link_to image_tag("logo-1", width:
         "3%"), votes_path(article) %> <% else %> <%= link_to image_tag("logo-2",
         width: "3%"), votes_path(article) %> <% end %>
+        </div>
       </div>
     </div>
-  </div>
   <% end %>
 </div>
