@@ -30,7 +30,7 @@ her wine in the world, except perhaps some of the so-called Korean Village Wines
 (the home-made type). It is completely compati­ble with the extremely delicate
 palate of the Japanese people and blends perfectly with the flavor of their trad
 itional dishes', image: 'sake.jpeg')
-user3.articles.create!(title: 'Cosmopolitanism 101',
+user3.articles.create!(title: 'Cosmopolitan101',
 text: 'Now more than ever, the world needs to be more united. The effects of covid-19 have left millions dead, leaving
 families grieving, and economies bleeding. It is precisely in these times that one needs to become a citizen of the
 world. To become a cosmopoltan means to have the openness and empathy to respect, appreciate,

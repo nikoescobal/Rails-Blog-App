@@ -1,24 +1,26 @@
 <div class="font-mono">
   <div class="w-full h-96 border-bluegray-100 relative font-mono">
     <%= image_tag "/uploads/sushiboat.jpeg", class: "h-full w-full object-cover" %>
-    <div class="p-3 rounded absolute bottom-0 left-0 flex flex-col justify-center w-1/4 bg-teal-100 bg-opacity-50 space-y-2">
-      <h2 class="font-bold text-lg"><%= @articles.first.title %></h2>
-      <h3 class="text-sm"><%= truncate(@articles.first.text, length: 15, separator: ' ') %></h3>
+    <div class="md:p-2  lg:p-3 rounded absolute bottom-0 left-0 flex flex-col justify-center w-1/4 bg-teal-100 bg-opacity-50 md:space-y-1 lg:space-y-2">
+      <h2 class="flex justify-center font-bold text-sm p-2 text-white rounded bg-blue-700 w-full "><%= @articles.first.title %></h2>
+      <h3 class="text-xs"><%= truncate(@articles.first.text, length: 35, separator: ' ') %></h3>
       <div class="flex justify-between ">
-        <p class="text-xs capitalize group bg-yellow-300 text-teal-900 group-hover:text-teal-800 rounded shadow transition duration-300 md:text-xs lg:text-sm">Author: <%= @articles.first.user.username %></p>
-        <p><%= link_to 'Read More', article_path(@articles.first), class:"bg-yellow-300 bg-opacity-75 p-2 rounded-full text-red-200 text-xs italic btn btn-default group-hover:text-blue-600" %></p>
+        <p class="text-xs capitalize group text-blue-900 group-hover:text-teal-800">Author: <%= @articles.first.user.username %></p>
+        <p><%= link_to 'Read More', article_path(@articles.first), class:"group bg-yellow-300 hover:bg-yellow-400 p-2 rounded-full text-blue-600 hover:text-blue-800 text-xs italic btn btn-default group-hover:text-blue-900 shadow transition duration-300" %></p>
       </div>
     </div>
   </div>
   <div class="flex flex-row bg-gray-300 flex-wrap">
     <% @articles.each_with_index do |article, index| %>
       <div class="w-1/4 md:h-75 lg:h-full relative">
-        <img src="/uploads/<%= article.image %>" class="object-cover md:h-40 lg:h-64 md:w-full lg:w-full" />
-        <div class="p-3 rounded absolute bottom-0 bg-teal-100 bg-opacity-50 w-full space-y-2">
-          <h2 class="font-bold text-lg"h2><%= article.title %></h2>
-          <h3 class="text-md"><%= truncate(article.text, length: 15, separator: ' ') %></h3>
-          <p class="capitalize">Author: <%= article.user.username %></p>
-          <p><%= link_to 'Read More', article, class:"text-xs italic" %></p>
+        <img src="/uploads/<%= article.image %>" class="object-cover h-64 md:w-full lg:w-full" />
+        <div class="md:p-2 text-sm lg:p-3 rounded absolute bottom-0 bg-teal-100 bg-opacity-50 w-full md:space-y-1 lg:space-y-2">
+          <h2 class="flex justify-center font-bold text-sm p-2 text-white rounded bg-blue-700 w-full "h2><%= truncate(article.title, length: 25, separator: ' ') %></h2>
+          <h3 class="text-xs"><%= truncate(article.text, length: 35, separator: ' ') %></h3>
+          <div class="flex justify-between ">
+            <p class="text-xs capitalize group group-hover:text-teal-800">Author: <%= article.user.username %></p>
+            <p><%= link_to 'Read More', article, class:"group bg-yellow-300 hover:bg-yellow-400 p-2 rounded-full text-blue-600 hover:text-blue-800 text-xs italic btn btn-default group-hover:text-blue-900 shadow transition duration-300" %></p>
+          </div>
         </div>
       </div>
     <% end %>
