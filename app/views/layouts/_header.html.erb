@@ -37,11 +37,11 @@
               <div class="group py-2 px-3 bg-teal-400 hover:bg-yellow-300 text-teal-900 group-hover:text-teal-800 rounded shadow transition duration-300 md:text-xs lg:text-sm">
                 <%= link_to "Login", new_user_session_path, class:"group btn btn-default group-hover:text-blue-600" %>
               </div>
-              <%= link_to "Register", new_user_registration_path, class:"group btn btn-default hover:text-blue-600" %>
+              <%= link_to "Register", new_user_registration_path, class:"btn btn-default hover:text-blue-600" %>
             <% end %>
           </div>
           <!-- mobile menu -->
-          <div class="md:hidden flex items-center">
+          <div class="hidden md:hidden flex items-center">
             <button class="mobile-menu-button h-8 w-10 flex items-center transition delay-150 duration-300 ease-in-out animate-pulse focus:outline-none">
               <%= image_tag("menu") %>
             </button>
