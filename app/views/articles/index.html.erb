@@ -1,23 +1,24 @@
-<p id="notice"><%= notice %></p>
-<div class="w-full h-96 border-bluegray-100">
-  <%= image_tag "/uploads/art.jpeg", class: "h-full w-full bg-cover" %>
-  <img src="/uploads/<%= article.image %>" class="object-cover h-40 w-full" />
-</div>
-<div class="flex flex-row bg-gray-300 flex-wrap">
-  <% @articles.each_with_index do |article, index| %>
-    <div class="w-1/4 h-full">
-      <img src="/uploads/<%= article.image %>" class="object-cover h-40 w-full" />
-      <div>
-        <h2><%= article.title %></h2>
-        <h3><%= truncate(article.text, length: 60, separator: ' ') %></h3>
-        <p>Author: <%= article.user.username %></p>
-        <p><%= link_to 'Read More', article %></p>
-        <div>
-          <% if @vote_exist[index] %> <%= link_to image_tag("logo-1", width:
-        "3%"), votes_path(article) %> <% else %> <%= link_to image_tag("logo-2",
-        width: "3%"), votes_path(article) %> <% end %>
+<div class="font-mono">
+  <div class="w-full h-96 border-bluegray-100 relative font-mono">
+    <%= image_tag "/uploads/sushiboat.jpeg", class: "h-full w-full object-cover" %>
+    <div class="p-3 rounded absolute bottom-0 left-0 flex flex-col justify-center w-1/4 bg-teal-100 bg-opacity-50 space-y-2">
+      <h2 class="font-bold text-lg"><%= @articles.first.title %></h2>
+      <h3 class="text-md"><%= truncate(@articles.first.text, length: 35, separator: ' ') %></h3>
+      <p class="capitalize">Author: <%= @articles.first.user.username %></p>
+      <p><%= link_to 'Read More', article_path(@articles.first), class:"text-xs italic" %></p>
+    </div>
+  </div>
+  <div class="flex flex-row bg-gray-300 flex-wrap">
+    <% @articles.each_with_index do |article, index| %>
+      <div class="w-1/4 h-full relative">
+        <img src="/uploads/<%= article.image %>" class="object-cover h-64 w-full" />
+        <div class="p-3 rounded absolute bottom-0 bg-teal-100 bg-opacity-50 w-full space-y-2">
+          <h2 class="font-bold text-lg"h2><%= article.title %></h2>
+          <h3 class="text-md"><%= truncate(article.text, length: 35, separator: ' ') %></h3>
+          <p class="capitalize">Author: <%= article.user.username %></p>
+          <p><%= link_to 'Read More', article, class:"text-xs italic" %></p>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

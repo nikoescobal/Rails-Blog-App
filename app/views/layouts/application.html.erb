@@ -5,27 +5,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
   </head>
-
   <body>
-  <%= render 'layouts/header', locals: {categories:@categories} %>
-  <%= render "shared/flash_notice" %>
-
-
-  
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <%= render 'layouts/header', locals: {categories:@categories} %>
+    <%= render "shared/flash_notice" %>
     <%= yield %>
     <%= render 'layouts/footer' %>
   </body>
 </html>
-
 <!--
 
 <nav class="mt-0 w-full">
