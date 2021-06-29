@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   # GET /articles or /articles.json
   def index
 
-    @articles = Article.order(:vote_count)
+    @articles = Article.all.ordered_by_vote_count
     @vote_exist = []
     if user_signed_in?
     @articles.each do |article|

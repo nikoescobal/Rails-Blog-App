@@ -1,6 +1,6 @@
 <div class="font-mono">
   <div class="w-full h-96 border-bluegray-100 relative font-mono">
-    <%= image_tag "/uploads/sushiboat.jpeg", class: "h-full w-full object-cover" %>
+    <%= image_tag "/uploads/#{Article.ordered_by_vote_count.first.image}", class: "h-full w-full object-cover" %>
     <div class="md:p-2  lg:p-3 rounded absolute bottom-0 left-0 flex flex-col justify-center w-1/4 bg-teal-100 bg-opacity-50 md:space-y-1 lg:space-y-2">
       <h2 class="flex justify-center font-bold text-sm p-2 text-white rounded bg-blue-700 w-full "><%= @articles.first.title %></h2>
       <h3 class="text-xs"><%= truncate(@articles.first.text, length: 35, separator: ' ') %></h3>

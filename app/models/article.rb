@@ -11,4 +11,8 @@ class Article < ApplicationRecord
     with: /\w+\.(jpg|png|jpeg)\z/i,
     message: 'must be a JPG, JPEG or PNG image'
   }
+
+  scope :ordered_by_vote_count, -> { order(vote_count: :desc) }
+
 end
+
