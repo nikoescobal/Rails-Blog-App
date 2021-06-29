@@ -20,7 +20,11 @@ window.onload = function () {
   const menu = document.querySelector(".mobile-menu");
 
   a.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-    }); 
+    menu.classList.toggle("hidden");
+  });
 };
 
+$(".alert").fadeOut(3000);
+
+
+$(".notice").fadeOut(3000);
