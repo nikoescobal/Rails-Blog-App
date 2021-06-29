@@ -1,11 +1,10 @@
 <div class="font-mono">
-  <div class="w-full h-96 border-bluegray-100 relative font-mono">
+  <div class="h-96 border-bluegray-100 relative font-mono">
     <%= image_tag "/uploads/#{Article.ordered_by_vote_count.first.image}", class: "h-full w-full object-cover" %>
-    <div class="md:p-2  lg:p-3 rounded absolute bottom-0 left-0 flex flex-col justify-center w-1/4 bg-teal-100 bg-opacity-50 md:space-y-1 lg:space-y-2">
-      <h2 class="flex justify-center font-bold text-sm p-2 text-white rounded bg-blue-700 w-full "><%= @articles.first.title %></h2>
-      <h3 class="text-xs"><%= truncate(@articles.first.text, length: 35, separator: ' ') %></h3>
-      <div class="flex justify-between ">
-        <p class="text-xs capitalize group text-blue-900 group-hover:text-teal-800">Author: <%= @articles.first.user.username %></p>
+    <div class="md:p-2 space-y-4 lg:p-3 rounded absolute bottom-0 left-0 flex flex-col justify-center w-1/4 group bg-teal-100 bg-opacity-30 group hover:bg-opacity-0">
+      <h2 class="flex justify-center font-bold text-lg p-2 text-white rounded bg-teal-400 group-hover:bg-teal-500 shadow group-hover:bg-opacity-80 "><%= @articles.first.title %></h2>
+      <div class="flex justify-between space-y-4 text-white ">
+        <h3 class="bg-blue-400 group-hover:bg-blue-600 group-hover:bg-opacity-80 p-2 rounded text-xs"><%= truncate(@articles.first.text, length: 15, separator: ' ') %></h3>
         <p><%= link_to 'Read More', article_path(@articles.first), class:"group bg-yellow-300 hover:bg-yellow-400 p-2 rounded-full text-blue-600 hover:text-blue-800 text-xs italic btn btn-default group-hover:text-blue-900 shadow transition duration-300" %></p>
       </div>
     </div>
