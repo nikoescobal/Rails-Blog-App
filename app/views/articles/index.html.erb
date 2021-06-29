@@ -13,14 +13,14 @@
   <div class="flex flex-row bg-gray-300 flex-wrap">
     <% @articles.each_with_index do |article, index| %>
       <div class="w-1/4 md:h-75 lg:h-full relative">
-        <img src="/uploads/<%= article.image %>" class="object-cover h-64 md:w-full lg:w-full" />
-        <div class="p-2 rounded h-full absolute bottom-0 bg-teal-100 bg-opacity-30 group hover:bg-opacity-0 w-full md:space-y-1 lg:space-y-2 flex flex-col justify-between">
-          <div class="bg-blue-400 group-hover:bg-blue-600 w-1/3 items-center p-2 flex justify-center rounded">
+        <img src="/uploads/<%= article.image %>" class="object-cover h-64 md:w-full lg:w-full " />
+        <div class="p-2 rounded h-full absolute bottom-0 bg-teal-100 bg-opacity-30 group hover:bg-opacity-0 w-full md:space-y-1 lg:space-y-2 flex flex-col justify-between shadow transition duration-500">
+          <div class="bg-blue-400 group-hover:bg-teal-500 shadow group-hover:bg-opacity-80 w-1/3 items-center p-2 flex justify-center rounded shadow transition duration-500">
             <h2 class="font-bold lg:text-lg md:text-sm text-white underline"h2><%= article.categories.first.name %></h2>
           </div>
           <div class="flex w-full text-white items-center text-center justify-between group">
-            <h3 class="bg-blue-400 group-hover:bg-blue-600 p-2 rounded text-xs"><%= truncate(article.title, length: 35, separator: ' ') %></h3>
-            <p><%= link_to 'Read More', article, class:"bg-yellow-300 group-hover:bg-yellow-400 p-2 rounded-full text-blue-600 group-hover:text-blue-800 text-xs italic btn btn-default group-hover:text-blue-900 shadow transition duration-300" %></p>
+            <h3 class="bg-blue-400 group-hover:bg-blue-600 group-hover:bg-opacity-80 p-2 rounded text-xs"><%= truncate(article.title, length: 35, separator: ' ') %></h3>
+            <p><%= link_to 'Read More', article, class:"bg-yellow-300 group-hover:bg-yellow-400 p-2 rounded-full text-blue-600 group-hover:text-blue-800 text-xs italic btn btn-default group-hover:text-blue-900 shadow transition duration-500" %></p>
           </div>
         </div>
       </div>

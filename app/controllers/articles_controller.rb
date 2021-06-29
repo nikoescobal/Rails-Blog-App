@@ -57,7 +57,7 @@ class ArticlesController < ApplicationController
       File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
         file.write(uploaded_io.read)
         params[:article][:image] = uploaded_io.original_filename
-      end
+        end
 
     @article = current_user.articles.build(article_params)
 
