@@ -1,38 +1,16 @@
 <p id="notice"><%= notice %></p>
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
-
-<div class="details">
-
- <% if @vote_exist %>
- <%= link_to image_tag("logo-1"), votes_path(@article) %>
- <% else %>
- <%= link_to image_tag("logo-2"), votes_path(@article) %>
- <% end %>
-                   
-
-
-<h1><%= @article.title %></h1>
-<table>
-  <tr>
-    <th>Title</th>
-    <td><%= @article.title %></td>
-  </tr>
-  <tr>
-    <th>Text</th>
-    <td><%= @article.text %></td>
-  </tr>
-  <tr>
-    <th>Image</th>
-    <td><%= @article.image %></td>
-  </tr>
-</table>
-
-</div>
-
-<section class="admin">
-  <%= link_to 'Edit', edit_article_path(@article), class: "button" %>
-  <%= link_to 'Delete', @article, class: "button", method: :delete,
+<div class="h-full border-bluegray-100 bg-bluegray-100 bg-opacity-50 font-mono text-white">
+  <%= image_tag "/uploads/#{Article.find(params[:id]).image}", class: "bg-opacity-10 w-full object-cover absolute" %>
+  <div class="md:py-2 space-y-4 lg:py-3 rounded items-center flex flex-col bg-teal-500 group">
+    <h1 class="bg-yellow-500 group-hover:bg-teal-500 group-hover:bg-opacity-60 p-6 rounded bg-opacity-50 text-3xl lg:text-6xl md:text-4xl items-center relative flex text-center"><%= @article.title %></h1>
+    <h3 class="bg-blue-800 bg-opacity-30 group-hover:bg-opacity-70 group text-md flex relative justify-center items-center text-center p-16 md:p-20 lg:p-30 w-full text-white whitespace-pre-line"><%= @article.text %></h3>
+    <div class="text-white relative">
+      <div class="details relative flex space-x-3 lg:bg-transparent md:bg-teal-500 justify-between">
+        <%= link_to 'Back', articles_path %>
+        <section class="admin">
+          <%= link_to 'Edit', edit_article_path(@article), class: "button" %>
+          <%= link_to 'Delete', @article, class: "button", method: :delete,
                         data: { confirm: "Are you sure?" } %>
-</section>
+        </section>
+      </div>
+    </div>
