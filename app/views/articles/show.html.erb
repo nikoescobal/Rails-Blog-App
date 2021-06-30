@@ -5,11 +5,11 @@
     <h1 class="bg-yellow-500 group-hover:bg-teal-500 group-hover:bg-opacity-60 p-6 rounded bg-opacity-50 text-3xl lg:text-6xl md:text-4xl items-center relative flex text-center"><%= @article.title %></h1>
     <h3 class="bg-blue-800 bg-opacity-30 group-hover:bg-opacity-70 group text-md flex relative justify-center items-center text-center p-16 md:p-20 lg:p-30 w-full text-white whitespace-pre-line"><%= @article.text %></h3>
     <div class="text-white relative">
-      <div class="details relative flex space-x-3 lg:bg-transparent md:bg-teal-500 justify-between">
-        <%= link_to 'Back', articles_path %>
+      <div class="details py-10 relative flex space-x-3 lg:bg-transparent md:bg-teal-500 justify-between">
+        <%= link_to 'Back', articles_path, class:"text-white hover:text-blue-500" %>
         <section class="admin">
-          <%= link_to 'Edit', edit_article_path(@article), class: "hover:bg-text-red-500" %>
-          <%= link_to 'Delete', @article, class: "button", method: :delete,
+          <%= link_to 'Edit', edit_article_path(@article), class: "text-white hover:text-blue-200 button" %>
+          <%= link_to 'Delete', @article, class: "button", class:"text-white hover:text-red-500", method: :delete,
                         data: { confirm: "Are you sure?" } %>
         </section>
       </div>
