@@ -8,7 +8,7 @@
       <div class="details relative flex space-x-3 lg:bg-transparent md:bg-teal-500 justify-between">
         <%= link_to 'Back', articles_path %>
         <section class="admin">
-          <%= link_to 'Edit', edit_article_path(@article), class: "button" %>
+          <%= link_to 'Edit', edit_article_path(@article), class: "hover:bg-text-red-500" %>
           <%= link_to 'Delete', @article, class: "button", method: :delete,
                         data: { confirm: "Are you sure?" } %>
         </section>
