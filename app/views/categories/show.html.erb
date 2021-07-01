@@ -1,4 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<% @categories.each_with_index do |category, index| %>
+  <%= Category.find(params[:id]).name %>
+<% end %>
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

@@ -27,6 +27,7 @@ Sushi has been around since at least the fourth century, according to a Chinese 
 The more modern concept of sushi didn’t arrive until around the 1820s, when a man named Hanaya Yohei opened the first sushi stall in the city of Edo in Japan. He is credited as being the creator of modern nigiri sushi thanks to his development of a “fast food” sushi process. This process involved Yohei adding rice vinegar and salt to cooked rice and then topping it with a slice of raw fish, fresh from the bay.
 
 Sushi was finally brought to America in 1966, when a man named Noritoshi Kanai and his Jewish business partner, Harry Wolff, opened Kawafuku Restaurant in Little Tokyo, Los Angeles. Their restaurant was the first to offer traditional nigiri sushi to Americans. It was incredibly successful with Japanese businessmen, who then introduced it to their American colleagues and friends.', image: 'sushiboat.jpeg')
+
 user2.articles.create!(title: 'How To Drink Sake',
 text: 'Sake is a Japanese drink that is made by fermenting rice. It is often referred to as a wine but is brewed quite differently. Also, the Alcohol by Volume (ABV) of sake is far higher than that of wine or beer. The sake rice is milled so that it mostly contains starch. To the rice mash, fungus is added and it helps to convert the starch into sugar. Thereafter, the sugar is allowed to ferment in the presence of yeast.
 
@@ -37,6 +38,7 @@ The addition of brewer’s alcohol to the fermented alcohol is another important
 Sake is quite enjoyable with food. Some people think that it should not be served with sushi because of the presence of rice in both, food and drink. However, there are no rules to suggest that you cannot enjoy your brew as you relish your sushi. The drink goes down particularly well with spicy dishes. The contrast in flavors is rather interesting and pleasurable. Experts recommend Junmai with seafood and sushi, while Junmai Daiginjo goes well with meats.
 
 Sake is most loosely described as a “rice wine” and while it is exactly that, it is also much more than that. Sake has a unique taste which cannot be compared to any other wine in the world, except perhaps some of the so-called Korean Village Wines (the home-made type). It is completely compati­ble with the extremely delicate palate of the Japanese people and blends perfectly with the flavor of their traditional dishes', image: 'sake.jpeg')
+
 user3.articles.create!(title: 'Cosmopolitan101',
 text: 'The pandemic has caused the largest and fastest decline in international flows — including trade, foreign direct investment, and international travel — in modern history. While these numbers imply a major rollback of globalization’s recent gains, they don’t necessarily signal a fundamental collapse of international market integration. But how deep will the plunge really be? 
 
@@ -47,6 +49,7 @@ As leaders wrestle to guide their organizations through the Covid-19 pandemic, d
 Now more than ever, the world needs to be more united. The effects of covid-19 have left millions dead, leaving families grieving, and economies bleeding. It is precisely in these times that one needs to become a citizen of the world To become a cosmopoltan means to have the openness and empathy to respect, appreciate, and support international policies, cultures, and growth.
 
 In conclusion, Covid-19 looks like a “bend but won’t break crisis” for globalization. International flows are plummeting, but globalization — and opposition to globalization — will continue to present business opportunities and challenges. Careful attention to the drivers of globalization’s future can help companies navigate through and even profit from globalization’s turbulence. A volatile world of partially connected national economies expands possibilities for global strategy even as it complicates the management of multinational firms. Now is the time for global corporations to show their value by harnessing the best of the world’s capabilities to end the pandemic and bolster the recovery.', image: 'cosmopolitan.jpeg')
+
 user4.articles.create!(title: 'Rise Of The Nomad',
 text: "While Covid-19 has left governments reeling, people dying, and millions affected negatively, it is also fair to say that not all the effects have been bad -- in fact, it's precisely because of this pandemic that a massive shift to remote work started to happen. With people prioritizing their health and safety, the appeal to become a digital nomad is very real. In fact, the pandemic accelerated the trend towards digital nomadism, despite travel restrictions.
 
@@ -60,10 +63,54 @@ Digital nomadism is likely to be one dimension of a broader global redistributio
 
 But for the time being, there are still reasons why employers might favour digital nomads over conventional offshoring, Frey adds. “A more significant barrier to offshoring than digital infrastructure is language,” he says. “Machine translation is improving rapidly but language and culture matter enormously for trade in services.”", image: 'digitalnomad.jpeg')
 
-# user5.articles.create!(title: 'Decoding The Creation Of Adam',
-# text: "The Creation of Adam is a fresco painting by Italian artist Michelangelo, which forms part of the Sistine
-# Chapel's ceiling, painted c. 1508–1512. It illustrates the Biblical creation narrative from the Book of Genesis in which
-# God gives life to Adam, the first man.", image: 'art.jpeg')
+user4.articles.create!(title: 'What is Math Rock?',
+text: "Math rock is just as eccentric as it sounds - It’s a bit like a mathematician dabbling with musical chords, strings, and notations and coming up with something genius. The results are phenomenally varied and unique. In India, where artists and bands are constantly experimenting and innovating, math rock is an exciting world worth entering. 
+
+By the 90s, Math Rock was a known genre and many new bands were popping up. In Europe, bands such as Kebong (Poland), The Redneck Manifesto (Ireland), and Uzeda (Italy) were some. In the United States, bands were mostly from San Diego (Upsilon Acrux, Drive like Jehu, No Knife) and Northern California (The well-known Game Theory and The Loud Family). As far as contemporary math rock is concerned, bands such as Slint, Chavez, and Shellac, which were formed in the 1990s, continue to tour and release albums today. The newest crop of bands, such as Battles and Tall Ships, continue to enjoy renewed listener interest. 
+
+Internationally, however, math rock is better recognised. It originated in the 1980s out of progressive rock, which itself is defined by long-winding instrumentation and a perpetual sense of ‘progression’. Music critics consider a Canadian punk rock group Nomeansno as a pioneer of the genre. They would make music in the most irregular and complex structures imaginable, resulting in savoury outcomes. Massacre and Black Flag were two other bands that contributed significantly to the development of the genre in the 80s.
+
+As you might have guessed by now, this is not your conventional music where rhythm is god and everything is based on a structure. This is math rock. It is defined by its abnormal time signatures and complex rhythm.
+
+Imagine this: one, two, three, four; one, two, three, four – this is a regular 4/4 time signature every mainstream artist from Lil Wayne to Aerosmith would use for their songs. But in math rock, the beats would go – one, two, three, four, five, six, seven; one, two, three, four, five, six, seven, eight – the time signature is irregular.", image: 'chon.jpeg')
+
+user5.articles.create!(title: 'Decoding The Creation Of Adam',
+text: "The most famous section of the Sistine Chapel ceiling is Michelangelo’s Creation of Adam.  This scene is located next to the Creation of Eve, which is the panel at the center of the room, and the Congregation of the Waters, which is closer to the altar.
+
+The Creation of Adam is a fresco painting by Italian artist Michelangelo, which forms part of the Sistine
+Chapel's ceiling, painted c. 1508–1512. It illustrates the Biblical creation narrative from the Book of Genesis in which
+God gives life to Adam, the first man.
+
+Unlike the figure of God, who is outstretched and aloft, Adam is depicted as a lounging figure who rather lackadaisically responds to God’s imminent touch.  This touch will not only give life to Adam, but will give life to all mankind.  It is, therefore, the birth of the human race.  Adam’s body forms a concave shape which echoes the form of God’s body, which is in a convex posture inside the nebulous, floating form.  This correspondence of one form to the other seems to underscore the larger idea of Man corresponding to God; that is, it seems to reflect the idea that Man has been created in the image and likeness of God – an idea with which Michelangelo had to have been familiar.
+
+One of the questions that has been raised about this scene is the identity of the figures next to God.  Given her privileged placement under the arm of God, the female figure is presumably an important one.  Traditionally, she has been thought to be Eve, the future wife of Adam, who waits to the side until she is created out of Adam’s rib.  More recently, however, a theory has been floated that this is actually the Virgin Mary, who takes this place of honor next to God and the child next to her, who would therefore be the Christ Child.
+
+In all, the painting shows several hallmarks of Michelangelo’s painting style: the lounging position of both Adam and God, the use of bodies which are both muscular and twisting, and the painting of figures who come across as works of sculpture. It is good to remember that Michelangelo was, after all, a sculptor.  Painting was not his primary area.", image: 'art.jpeg')
+
+user2.articles.create!(title: 'The Most Influential Person In History',
+text: "Among the influences that shaped Western Civilization, there’s probably no story more significant than the “Jesus Story.” Even for religious skeptics, the historical influence of Jesus of Nazareth is the result of arguably the most influential life ever lived.
+
+But why…?
+
+Jesus was raised in humble Jewish surroundings in Roman-controlled Judea and Galilee, he never traveled more than 200 miles from his birthplace, he had a small group of simple followers, and he was killed for violating the religious laws of his own people. He never received political power, he never raised an army, and he never conquered territory. By historical standards, Jesus didn’t cut it as an influential figure in political, economic, or military power.
+
+So, why the powerful influence — even today?
+
+Why does about a third of the world call themselves his followers about 2,000 years later?
+
+There must be something more to the story surrounding the historical influence of Jesus…
+  
+When Jesus was about 30-years-old, he started his public ministry around the Sea of Galilee. He was known for powerful teaching and a series of recorded miracles. Over the next three-plus years, his reputation spread throughout the region, although he tried to keep a low profile. The Roman rulers of the Jewish provinces and the religious leaders of the Jewish people kept an eye on him. But why…? It seems his main teachings in public were:
+• God loves us.
+• Love each other.
+• People have unique value.
+• The Kingdom of God has come to earth.
+• God will judge us in the end.
+• God forgives those who ask.
+
+For some reason, Jesus became more and more of a perceived threat to the “organized religion” of the day.
+
+Indeed, about one-third of the world is considered “Christian” today. That’s a pretty staggering number – that’s a pretty influential life after nearly 2,000 years. Yes, some religious institutions have confused and cluttered the original message of Jesus over the centuries, but his simple life and powerful words still speak for themselves.", image: 'chon.jpeg')
 
 Category.create(name: 'Food', priority: 1)
 Category.create(name: 'Drink', priority: 2)
@@ -77,5 +124,8 @@ ArticleCategory.create(article_id:1, category_id:1)
 ArticleCategory.create(article_id:2, category_id:2)
 ArticleCategory.create(article_id:3, category_id:6)
 ArticleCategory.create(article_id:4, category_id:7)
+ArticleCategory.create(article_id:5, category_id:3)
+ArticleCategory.create(article_id:6, category_id:4)
+ArticleCategory.create(article_id:7, category_id:5)
 
 Vote.create(user_id:1, article_id:1)
