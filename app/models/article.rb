@@ -12,8 +12,12 @@ class Article < ApplicationRecord
     message: 'must be a JPG, JPEG or PNG image'
   }
 
+  def self.first_four_articles
+    Article.first_four.filter{|el| el!=Article.ordered_by_vote_count}
+  end
+
   scope :ordered_by_vote_count, -> { order(vote_count: :desc) }
-  scope :first_four, -> { limit(4) }
+  scope :first_four, -> { limit(4).where.not(id: Article.ordered_by_vote_count.first.id) }
 
 end
 
