@@ -13,6 +13,7 @@ class Article < ApplicationRecord
   }
 
   scope :ordered_by_vote_count, -> { order(vote_count: :desc) }
+  scope :first_four, -> { limit(4) }
 
 end
 

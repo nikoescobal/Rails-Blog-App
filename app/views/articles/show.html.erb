@@ -3,7 +3,7 @@
   <%= image_tag "/uploads/#{Article.find(params[:id]).image}", class: "bg-opacity-10 w-full object-cover absolute" %>
   <div class="md:py-2 space-y-4 lg:py-3 items-center flex flex-col bg-teal-500 group">
     <h1 class="bg-teal-500 p-6 rounded bg-opacity-50 text-3xl lg:text-6xl md:text-4xl items-center relative flex text-center"><%= @article.title %></h1>
-    <h3 class="bg-gradient-to-b from-transparent to-blue-700 bg-opacity-30 group-hover:bg-opacity-70 group text-md flex relative justify-center items-center text-center pt-16 px-16 md:pt-20 md:px-20 lg:px-30 lg:pt-30 w-full text-white whitespace-pre-line"><%= @article.text %></h3>
+    <h3 class="bg-gradient-to-b from-transparent to-blue-700 bg-opacity-30 hover:bg-opacity-70 group text-md flex relative justify-center items-center text-center pt-16 px-16 md:pt-20 md:px-20 lg:px-30 lg:pt-30 w-full text-white whitespace-pre-line"><%= @article.text %></h3>
     <h3 class="bg-teal-500 bg-opacity-50 group text-md flex relative justify-center items-center text-center w-full uppercase text-white">Written by:<%= truncate(@article.user.username, length: 15, separator: ' ') %></h3>
     <div class="text-white group relative flex justify-center w-full py-2 px-3 rounded bg-yellow-700 bg-opacity-30">
       <div class="details py-10 relative flex space-x-3 lg:bg-transparent md:bg-teal-500 justify-between">
