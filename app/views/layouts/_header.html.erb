@@ -28,7 +28,7 @@
           <div class="flex lg:space-x-2 md:space-x-1 items-center md:text-xs lg:text-sm group">
             <% if user_signed_in? %>
               <div class="group py-2 px-3 bg-teal-400 hover:bg-yellow-300 text-teal-900 group-hover:text-teal-800 rounded shadow transition duration-300 md:text-xs lg:text-sm">
-                <%= link_to "Edit account", edit_user_registration_path, class: "btn btn-default hover:underline group-hover:text-blue-600" %>
+                <%= link_to "New Article", new_article_path, class: "btn btn-default hover:underline group-hover:text-blue-600" %>
               </div>
               <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-default hover:underline hover:text-blue-600" %>
             </div>
@@ -59,7 +59,7 @@
           </div>
         <% end %>
         <% if user_signed_in? %>
-          <%= link_to "Edit account", edit_user_registration_path, class: "btn btn-default group-hover:text-blue-600 block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
+          <%= link_to "New Article", new_article_path, class: "btn btn-default group-hover:text-blue-600 block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-default hover:text-blue-600 block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
         <% else %>
           <%= link_to "Login", new_user_session_path, class:"lg:hidden group btn btn-default group-hover:text-blue-600 block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
