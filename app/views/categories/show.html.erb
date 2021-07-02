@@ -1,16 +1,24 @@
 <div class="font-mono flex flex-wrap w-full">
-  <div class="place-items-start grid xs:grid-cols-1 xs:grid-cols1 md:grid-cols-3 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2">
+  <div class="place-items-start grid xs:grid-cols-1 xs:grid-cols1 md:grid-cols-3 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2 even:flex-row odd:flex-row-reverse">
     <% fetch_articles.each_with_index do |article, index| %>
-      <img src="/uploads/<%= article.image %>" class="object-cover w-full h-80" />
-      <div class="flex-column flex">
-        <h2 class="items-center" ><%= @category.name %></h2>
-        <h2 class="items-center" ><%= article.title %></h2>
-        <h2 class="items-center" ><%= truncate(article.text, length: 15, separator: ' ') %></h2>
-      </div>
-    <% end %>
+      <% if index.odd? %>
+        <img src="/uploads/<%= article.image %>" class="object-cover lg:order-second w-full h-80 lg:even lg:odd" />
+        <div class="flex-col flex odd lg:order-first">
+          <h2 class="items-center" ><%= @category.name %></h2>
+          <h2 class="items-center" ><%= article.title %></h2>
+          <h2 class="items-center" ><%= truncate(article.text, length: 15, separator: ' ') %></h2>
+        <% elsif index.even? %>
+          <img src="/uploads/<%= article.image %>" class="object-cover lg:order-first w-full h-80 even" />
+          <div class="flex-col flex even lg:order-second">
+            <h2 class="items-center" ><%= @category.name %></h2>
+            <h2 class="items-center" ><%= article.title %></h2>
+            <h2 class="items-center" ><%= truncate(article.text, length: 15, separator: ' ') %></h2>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <div class="space-x-6 py-5 flex items-center justify-center w-full">
+      <%= link_to 'Edit', edit_category_path(@category) %>
+      <%= link_to 'Back', categories_path %>
+    </div>
   </div>
-  <div class="space-x-6 py-5 flex items-center justify-center w-full">
-    <%= link_to 'Edit', edit_category_path(@category) %>
-    <%= link_to 'Back', categories_path %>
-  </div>
-</div>
