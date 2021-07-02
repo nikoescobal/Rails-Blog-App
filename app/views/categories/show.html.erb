@@ -1,24 +1,34 @@
 <div class="font-mono flex flex-wrap w-full">
-  <div class="place-items-start grid xs:grid-cols-1 xs:grid-cols1 md:grid-cols-3 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2 even:flex-row odd:flex-row-reverse">
+  <div class="place-items-start grid xs:grid-cols-1 xs:grid-cols1 md:grid-cols-3 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2">
     <% fetch_articles.each_with_index do |article, index| %>
       <% if index.odd? %>
         <img src="/uploads/<%= article.image %>" class="object-cover lg:order-second w-full h-80 lg:even lg:odd" />
-        <div class="flex-col flex odd lg:order-first">
-          <h2 class="items-center" ><%= @category.name %></h2>
-          <h2 class="items-center" ><%= article.title %></h2>
-          <h2 class="items-center" ><%= truncate(article.text, length: 15, separator: ' ') %></h2>
-        <% elsif index.even? %>
-          <img src="/uploads/<%= article.image %>" class="object-cover lg:order-first w-full h-80 even" />
-          <div class="flex-col flex even lg:order-second">
-            <h2 class="items-center" ><%= @category.name %></h2>
-            <h2 class="items-center" ><%= article.title %></h2>
-            <h2 class="items-center" ><%= truncate(article.text, length: 15, separator: ' ') %></h2>
+        <div class="flex-col space-y-4 mx-auto flex odd lg:order-first w-full">
+          <div class="bg-teal-400 p-3 bg-opacity-70">
+            <h2 class="items-center flex justify-center underline text-lg text-white" ><%= @category.name %></h2>
+          </div>
+          <h2 class="items-center flex justify-center font-bold md:text-sm text-md px-10" ><%= article.title %></h2>
+          <h2 class="items-center text-xs flex justify-center px-10" ><%= truncate(article.text, length: 200, separator: ' ') %></h2>
+          <div class="flex justify-center py-3">
+            <p><%= link_to 'Read More', @category.articles.last, class:"bg-yellow-300 hover:bg-yellow-400 p-2 rounded-full text-blue-600 hover:text-blue-800 text-xs italic btn btn-default hover:text-blue-900 shadow transition duration-500" %></p>
+          </div>
+        <% else %>
+          <img src="/uploads/<%= article.image %>" class="object-cover lg:order-first w-full h-80 lg:even lg:odd" />
+          <div class="flex-col space-y-4 mx-auto flex even lg:order-second w-full">
+            <div class="bg-teal-400 p-3 bg-opacity-70">
+              <h2 class="items-center flex justify-center underline text-lg text-white" ><%= @category.name %></h2>
+            </div>
+            <h2 class="items-center flex justify-center font-bold md:text-sm text-md px-10" ><%= article.title %></h2>
+            <h2 class="items-center text-xs flex justify-center px-10" ><%= truncate(article.text, length: 200, separator: ' ') %></h2>
+            <div class="flex justify-center py-3">
+              <p><%= link_to 'Read More', @category.articles.last, class:"bg-yellow-300 hover:bg-yellow-400 p-2 rounded-full text-blue-600 hover:text-blue-800 text-xs italic btn btn-default hover:text-blue-900 shadow transition duration-500" %></p>
+            </div>
           <% end %>
         </div>
       <% end %>
     </div>
-    <div class="space-x-6 py-5 flex items-center justify-center w-full">
-      <%= link_to 'Edit', edit_category_path(@category) %>
-      <%= link_to 'Back', categories_path %>
+    <div class="space-x-6 py-6 flex items-center justify-center w-full">
+      <%= link_to 'Edit', edit_category_path(@category), class:"hover:underline text-white rounded-full hover:text-blue-900 bg-teal-400 py-2 px-4" %>
+      <%= link_to 'Back', categories_path, class:" hover:underline text-white rounded-full hover:text-blue-900 bg-blue-400 py-2 px-4" %>
     </div>
   </div>

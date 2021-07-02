@@ -987,8 +987,8 @@ module.exports = {
     strokeWidth: ['responsive'],
     tableLayout: ['responsive'],
     textAlign: ['responsive'],
-    textColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus'],
-    textDecoration: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus'],
+    textColor: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus', 'odd', 'even'],
+    textDecoration: ['responsive', 'group-hover', 'focus-within', 'hover', 'focus', 'odd', 'even'],
     textOpacity: ['responsive', 'dark', 'group-hover', 'focus-within', 'hover', 'focus', 'odd', 'even'],
     textOverflow: ['responsive'],
     textTransform: ['responsive'],
@@ -1012,7 +1012,7 @@ module.exports = {
       addUtilities
     }) {
       const extendUnderline = {
-        '.underline': {
+        '.underline-yellow': {
           'textDecoration': 'underline',
           'text-decoration-color': 'yellow',
         },
