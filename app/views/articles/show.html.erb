@@ -8,11 +8,12 @@
       <div class="details py-10 relative flex space-x-3 lg:bg-transparent md:bg-teal-500 justify-between">
         <%= link_to 'Back', articles_path, class:"text-white hover:underline hover:text-blue-500 bg:blue-300" %>
         <section class="admin">
-          <% if @vote_exist.blank? %>
-            <%= link_to image_tag("logo-1", width: "3%") %>
-          <% else %>
-            <%= link_to image_tag("logo-2", width: "3%") %>
-          <% end %>
+          <%# if @current_user.article.vote.blank? %>
+          <%= link_to image_tag("logo-2", width: "3%") %>
+          <%# else %>
+          <%= link_to image_tag("logo-1", width: "3%"), class: "button", method: :delete,
+                        data: { confirm: "Are you sure?" } %>
+          <%# end %>
           <%= link_to 'Edit', edit_article_path(@article), class: "hover:underline text-white hover:text-blue-200" %>
           <%= link_to 'Delete', @article, class: "button", class:"hover:underline text-white hover:text-red-500", method: :delete,
                         data: { confirm: "Are you sure?" } %>

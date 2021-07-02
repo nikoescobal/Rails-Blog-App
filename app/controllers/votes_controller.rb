@@ -5,12 +5,12 @@ class VotesController < ApplicationController
   end
 
   def destroy
-    fail
-    @current_user.vote.destroy
-    respond_to do |format|
-      format.html { redirect_to votes_url, notice: "Vote was successfully deleted." }
-      format.json { head :no_content }
-    end
+    @vote = Vote.find_by(user_id:@current_user.id)
+    @vote.destroy
+    # respond_to do |format|
+    #   format.html { redirect_to votes_url, notice: "Vote was successfully deleted." }
+    #   format.json { head :no_content }
+    # end
   end
 
 

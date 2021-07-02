@@ -6,16 +6,11 @@
 # movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 # Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create!(email: 'levi@gmail.com', password: '123456', password_confirmation: '123456', username:"levi",
-id:1)
-user2 = User.create!(email: 'aria@gmail.com', password: '123456', password_confirmation: '123456', username:"aria",
-id:2)
-user3 = User.create!(email: 'blake@gmail.com', password: '123456', password_confirmation: '123456', username:"blake",
-id:3)
-user4 = User.create!(email: 'jack@gmail.com', password: '123456', password_confirmation: '123456', username:"jack",
-id:4)
-user5 = User.create!(email: 'isabel@gmail.com', password: '123456', password_confirmation: '123456', username:"isabel",
-id:5)
+user1 = User.create!(email: 'levi@gmail.com', password: '123456', password_confirmation: '123456', username:"levi")
+user2 = User.create!(email: 'aria@gmail.com', password: '123456', password_confirmation: '123456', username:"aria")
+user3 = User.create!(email: 'blake@gmail.com', password: '123456', password_confirmation: '123456', username:"blake")
+user4 = User.create!(email: 'jack@gmail.com', password: '123456', password_confirmation: '123456', username:"jack")
+user5 = User.create!(email: 'isabel@gmail.com', password: '123456', password_confirmation: '123456', username:"isabel")
 
 user1.articles.create!(title: 'The Art Of Sushi',
 text: 'Sushi is a multidisciplinary craft that produces a multisensory work of art. Visual eminence is not the only aspect of sushi which a student has to learn about before they can become a master of sushi. The taste of the sushi is just as important; the fish must be fresh, and no ingredient should be overpowering. Sushi is an act of balancing tastes so that everything works together to become a masterpiece.
