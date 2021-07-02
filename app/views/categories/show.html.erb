@@ -1,4 +1,16 @@
-<p id="notice"><%= notice %></p>
-<%= highest_ranked_articles %>
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="font-mono flex flex-wrap w-full">
+  <div class="place-items-start grid xs:grid-cols-1 xs:grid-cols1 md:grid-cols-3 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2">
+    <% fetch_articles.each_with_index do |article, index| %>
+      <img src="/uploads/<%= article.image %>" class="object-cover h-64 w-80" />
+      <div class="flex-column flex">
+        <h2 class="items-center h-64 w-80" ><%= @category.name %></h2>
+        <h2 class="items-center h-64 w-80 flex justify-start" ><%= article.title %></h2>
+        <h2 class="justify-center items-center h-64 w-80" ><%= truncate(article.text, length: 15, separator: ' ') %></h2>
+      </div>
+    <% end %>
+  </div>
+  <div class="space-x-6 py-5 flex items-center justify-center w-full">
+    <%= link_to 'Edit', edit_category_path(@category) %>
+    <%= link_to 'Back', categories_path %>
+  </div>
+</div>
