@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
 
   # GET /articles or /articles.json
-  def index
+def index
     @articles = Article.all.ordered_by_vote_count
     @vote_exist = []
     if user_signed_in?
@@ -13,17 +13,18 @@ class ArticlesController < ApplicationController
         @vote_exist << false
       end
     end
-    end
   end
+end
+
 
   # GET /articles/1 or /articles/1.json
   def show
-    @vote_exist = true
     @a_params = (params[:id])
-    if Vote.where(user_id: current_user.id, article_id: params[:id]).count > 0
+    if !(current_user.nil?)
+      Vote.where(user_id: current_user.id, article_id: params[:id]).count > 0
       @vote_exist = true
-    else
-      @vote_exist = false
+    # else
+      # @vote_exist = false
     end
   end
 

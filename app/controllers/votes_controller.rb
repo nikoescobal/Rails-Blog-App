@@ -24,4 +24,19 @@ class VotesController < ApplicationController
       format.html { redirect_to votes_url, notice: "Vote was successfully deleted." }
       format.json { head :no_content }
     end
+
+
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_vote
+    @vote = Vote.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def vote_params
+    params.fetch(:vote, {})
+  end
+
+
 end
+
