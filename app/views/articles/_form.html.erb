@@ -1,14 +1,12 @@
 <%= form_with(model: article, local: true) do |f| %>
-<%= render 'shared/errors', object: article %>
-  <%= f.label :title %>
-  <%= f.text_field :title, autofocus: true %>
-
-  <%= f.label :text %>
-  <%= f.text_field :text, rows: 7 %>
-  
-  <%= f.label :image %>
-  <%= f.file_field :image %>
-
-  <%= f.submit %>
-
-<% end %>
+  <div class="flex items-center flex-col">
+    <%= render 'shared/errors', object: article %>
+    <%= f.label :title %>
+    <%= f.text_field :title, autofocus: true %>
+    <%= f.label :text %>
+    <%= f.text_field :text, rows: 7 %>
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+    <%= f.submit %>
+  <% end %>
+</div>
