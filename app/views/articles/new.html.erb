@@ -1,10 +1,10 @@
-<div class="container mx-auto justify-center font-mono w-full flex">
-  <div class="space-y-3 flex flex-col">
-    <h1 class="flex items-center justify-center">Create A New Article</h1>
+<div class="bg-blue-100 h-screen justify-center font-mono flex">
+  <div class="space-y-3 py-4 flex flex-col">
+    <h1 class="text-white bg-teal-400 bg-opacity-70 rounded flex items-center text-2xl font-bold justify-center space-y-6 py-6">Create A New Article</h1>
     <p class="flex items-center justify-center"><%= render 'form', article: @article %></p>
-    <div class="flex-col flex justify-center">
-      <p><%= link_to 'Show', @article %></p>
-      <p><%= link_to 'Back', articles_path %></p>
+    <div class="flex-col flex items-center space-y-6">
+      <p><%= link_to 'Show', @article, class:" hover:underline text-white rounded-full hover:text-blue-900 bg-blue-400 py-2 px-4" %></p>
+      <p><%= link_to 'Back', articles_path, class:" hover:underline text-white rounded-full hover:text-blue-900 bg-blue-400 py-2 px-4" %></p>
     </div>
   </div>
 </div>
