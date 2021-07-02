@@ -1,11 +1,11 @@
 <div class="font-mono flex flex-wrap w-full">
   <div class="place-items-start grid xs:grid-cols-1 xs:grid-cols1 md:grid-cols-3 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2">
     <% fetch_articles.each_with_index do |article, index| %>
-      <img src="/uploads/<%= article.image %>" class="object-cover h-64 w-80" />
+      <img src="/uploads/<%= article.image %>" class="object-cover w-full h-80" />
       <div class="flex-column flex">
-        <h2 class="items-center h-64 w-80" ><%= @category.name %></h2>
-        <h2 class="items-center h-64 w-80 flex justify-start" ><%= article.title %></h2>
-        <h2 class="justify-center items-center h-64 w-80" ><%= truncate(article.text, length: 15, separator: ' ') %></h2>
+        <h2 class="items-center" ><%= @category.name %></h2>
+        <h2 class="items-center" ><%= article.title %></h2>
+        <h2 class="items-center" ><%= truncate(article.text, length: 15, separator: ' ') %></h2>
       </div>
     <% end %>
   </div>

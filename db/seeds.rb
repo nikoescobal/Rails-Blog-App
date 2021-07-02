@@ -110,22 +110,64 @@ When Jesus was about 30-years-old, he started his public ministry around the Sea
 
 For some reason, Jesus became more and more of a perceived threat to the “organized religion” of the day.
 
-Indeed, about one-third of the world is considered “Christian” today. That’s a pretty staggering number – that’s a pretty influential life after nearly 2,000 years. Yes, some religious institutions have confused and cluttered the original message of Jesus over the centuries, but his simple life and powerful words still speak for themselves.", image: 'chon.jpeg')
+Indeed, about one-third of the world is considered “Christian” today. That’s a pretty staggering number – that’s a pretty influential life after nearly 2,000 years. Yes, some religious institutions have confused and cluttered the original message of Jesus over the centuries, but his simple life and powerful words still speak for themselves.", image: 'jesus.jpeg')
 
-Category.create(name: 'Food', priority: 1)
-Category.create(name: 'Drink', priority: 2)
-Category.create(name: 'Music', priority: 3)
-Category.create(name: 'Art', priority: 4)
-Category.create(name: 'History', priority: 5)
-Category.create(name: 'Travel', priority: 6)
-Category.create(name: 'Business', priority: 7)
+user2.articles.create!(title: 'Classical Music for Beginners',
+text: "Listening to classical music can be an enlightening, inspiring or relaxing experience, depending on your mood and what you’re listening to. But you can’t just play a song and immediately enjoy and understand it — like you can with pop music. Appreciating and taking pleasure in classical music takes time and effort, but it’s something everyone can do. Whether you’ve dabbled in a little classical music before or you’ve never heard a single note, here’s everything you need to know about how to listen to classical music.
+  
+What defines classical music?
+Classical music can be difficult to define, but the term generally refers to music composed between 1750 and 1820. The music of Haydn, Mozart and most of Beethoven falls under this category. People first began to use the phrase “classical music” at the beginning of the 19th century, to describe a dazzling new era in music that fell between Bach (who was technically a Baroque composer) and Beethoven.
+  
+Although you don’t need to fully understand the definition of classical music to enjoy it, it certainly helps if you can comprehend that music is constantly being redefined. While Beethoven, Mozart and Haydn will always have their place in classical music, the genre didn’t begin with them and it certainly didn’t end with them.
+    
+Classical music lives on today, with composers writing scores for film productions, orchestras, solo performers, etc. There are even some bands and artists performing today whose songs are greatly influenced by classical music — whether they realise it or not!
 
-ArticleCategory.create(article_id:1, category_id:1)
-ArticleCategory.create(article_id:2, category_id:2)
-ArticleCategory.create(article_id:3, category_id:6)
-ArticleCategory.create(article_id:4, category_id:7)
-ArticleCategory.create(article_id:5, category_id:3)
-ArticleCategory.create(article_id:6, category_id:4)
-ArticleCategory.create(article_id:7, category_id:5)
+Listening to classical music isn’t just an enjoyable hobby for people who like the genre. Scientific studies have proven there’s a host of benefits you can gain if you embrace the classical composers. ", image: 'satie.jpeg')
+
+user5.articles.create!(title: 'Coachella: Redefining Live Music',
+text: "The Coachella Valley Music and Arts Festival is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert. It was co-founded by Paul Tollett and Rick Van Santen in 1999, and is organized by Goldenvoice, a subsidiary of AEG Presents.
+  
+The origin of the name Coachella is unclear. Some locals believe it was a misspelling of Conchilla, a Spanish word for the small white snail shells found in the valley's sandy soil, vestiges of a lake that dried up over 3,000 years ago.
+
+Coachella showcases popular and established musical artists as well as emerging artists and reunited groups. It is one of the largest, most famous, and most profitable music festivals in the United States and the world. Each Coachella staged from 2013 to 2015 set new records for festival attendance and gross revenues.      
+
+If you wanted to throw this party yourself, it would cost you $50M. But you can attend for just $500. It's a great deal, and it's worth every penny. Unquestionably, Coachella is worth the price of admission.
+
+Coachella has become the bread and butter of music festivals. Known for its stacked, star-studded lineups, fashion trends and hippie-style camping experience in the deserts of Indio, the festival has developed a culture of its own. ", image: 'coachella.jpeg')
+
+user5.articles.create!(title: 'How K-Pop Shook The World',
+text: "It is 1992, and three young men in a boy band are performing in a live television talent contest. The sound is new: Korean lyrics, Euro pop, African American hip-hop and rap. They dance in sync. The studio audience goes wild. The judges in their prim suits are less impressed. They reveal their scorecards. The band gets the lowest mark of the night, and is voted off the show
+
+The judges couldn't have got it more wrong.
+
+In the next few days the song I Know climbs to the top of the charts, and stays there for a record-smashing 17 weeks. That night the group, Seo Taeji and Boys, ignites a revolution. Korean pop or K-pop was born.
+
+K-pop is now a multi-billion-dollar industry. Bands like BTS and Blackpink are selling out in the US, UK and international stadiums within minutes. BTS is second only to Drake in international music sales. How did K-pop conquer the world? It’s a story with several parts.
+
+Psy was not a Korean version of a big pop star. Psy was Korea's version of Psy, and it turns out that's what the world wanted – Bernie Cho. 
+
+It showed that you could be big and not sing entirely in English or be in vogue. The power of the music video transcended language. Just one of the official videos of Gangnam Style on YouTube had well over three billion views, the largest number of hits of any video at that time.
+
+So, how did K-pop conquer the world? Clever design and brilliant marketing. But there's more to a K-pop band. It's an expression of Korean culture, and the government has been more than happy to capitalise on its success.", image: 'blackpink.jpeg')
+
+Category.create(name: 'Drink', priority: 1)
+Category.create(name: 'Music', priority: 2)
+Category.create(name: 'Art', priority: 3)
+Category.create(name: 'History', priority: 4)
+Category.create(name: 'Travel', priority: 5)
+Category.create(name: 'Business', priority: 6)
+Category.create(name: 'Food', priority: 7)
+
+ArticleCategory.create(article_id:1, category_id:7)
+ArticleCategory.create(article_id:2, category_id:1)
+ArticleCategory.create(article_id:3, category_id:5)
+ArticleCategory.create(article_id:4, category_id:6)
+ArticleCategory.create(article_id:5, category_id:2)
+ArticleCategory.create(article_id:6, category_id:3)
+ArticleCategory.create(article_id:7, category_id:4)
+ArticleCategory.create(article_id:8, category_id:2)
+ArticleCategory.create(article_id:9, category_id:2)
+ArticleCategory.create(article_id:10, category_id:2)
 
 Vote.create(user_id:1, article_id:1)
+Vote.create(user_id:2, article_id:1)
