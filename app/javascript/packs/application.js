@@ -23,7 +23,3 @@ window.onload = function () {
     menu.classList.toggle("hidden");
   });
 };
-
-$(".alert").fadeOut(3000);
-$(".notice").fadeOut(3000);
-
