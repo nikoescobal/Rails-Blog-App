@@ -2,15 +2,16 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[ show edit update destroy ]
 
   # GET /articles or /articles.json
-def index
-    @articles = Article.all.ordered_by_vote_count
-end
+  def index
+      @articles = Article.all.ordered_by_vote_count
+  end
 
 
   # GET /articles/1 or /articles/1.json
   def show
     @a_params = (params[:id])
     if !(current_user.nil?)
+      @vote = Vote.find_by(user_id:current_user.id, article_id:@article.id) 
     end
   end
 
@@ -40,7 +41,7 @@ end
 
     respond_to do |format|
       if @article.save
-        format.html { redirect_to @article, notice: "Article was successfully created." }
+        format.html { redirect_to @article, notice: "Article successfully created." }
         format.json { render :show, status: :created, location: @article }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -53,7 +54,7 @@ end
   def update
     respond_to do |format|
       if @article.update(article_params)
-        format.html { redirect_to @article, notice: "Article was successfully updated." }
+        format.html { redirect_to @article, notice: "Article successfully updated." }
         format.json { render :show, status: :ok, location: @article }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -66,7 +67,7 @@ end
   def destroy
     @article.destroy
     respond_to do |format|
-      format.html { redirect_to articles_url, notice: "Article was successfully destroyed." }
+      format.html { redirect_to articles_url, alert: "Article successfully destroyed." }
       format.json { head :no_content }
     end
   end

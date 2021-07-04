@@ -20,6 +20,11 @@
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 10px;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
 
 }
 
