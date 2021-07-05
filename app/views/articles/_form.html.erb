@@ -1,11 +1,11 @@
 <%= form_with(model: article, local: true) do |f| %>
-  <div class="flex items-center space-y-3 py-3 flex-col">
+  <div class="flex items-center space-y-3 py-3 flex-col h-full">
     <%= render 'shared/errors', object: article %>
     <%= f.label :title, class:"text-lg" %>
     <%= f.text_field :title, autofocus: true, class:"focus:outline-white text-lg" %>
     <%= f.label :text, class:"text-lg" %>
     <div class="pb-3">
-      <%= f.text_field :text, rows: 7, autofocus: true, class:"focus:outline-white text-lg" %>
+      <%= f.text_field :text, rows: 7, autofocus: true, class:"focus:outline-white text-lg py-14" %>
     </div>
     <div class="px-4 py-3 my-3 bg-gray-100 rounded-full">
       <%= f.label :image, class: "px-4 py-3" %>

@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
     @a_params = (params[:id])
     if !(current_user.nil?)
       @vote = Vote.find_by(user_id:current_user.id, article_id:@article.id) 
+      # @vote = current_user.articles.includes(:votes)
     end
   end
 
