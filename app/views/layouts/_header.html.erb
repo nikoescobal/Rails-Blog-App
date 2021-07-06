@@ -1,7 +1,7 @@
 <header>
   <!-- navbar goes here -->
-  <nav class="bg-bluegray-100">
-    <div class="px-8 pt-6 pb-7 mx-auto">
+  <nav class="bg-bluegray-100 px-8 pt-6 pb-7 mx-auto">
+    <div>
       <div class="flex justify-between">
         <!-- logo -->
         <div class="flex items-center">
@@ -35,7 +35,7 @@
           <% else %>
             <div class="flex space-x-2 md:space-x-1 items-center md:text-xs lg:text-sm group">
               <div class="group py-2 px-3 bg-teal-400 hover:bg-yellow-300 text-teal-900 group-hover:text-teal-800 rounded shadow transition duration-300 md:text-xs lg:text-sm">
-                <%= link_to "Login", new_user_session_path, class:"text-white group btn btn-default group-hover:text-blue-600" %>
+                <%= link_to "Login", new_user_session_path, class:"md:text-teal-500 lg:text-white group btn btn-default group-hover:text-blue-600" %>
               </div>
               <%= link_to "Register", new_user_registration_path, class:"btn btn-default hover:text-blue-600" %>
             <% end %>
@@ -59,10 +59,10 @@
           </div>
         <% end %>
         <% if user_signed_in? %>
-          <%= link_to "Write an article", new_article_path, class: "text-white btn btn-default group-hover:text-blue-600 block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
+          <%= link_to "Write an article", new_article_path, class: "md:text-teal-500 hover:text-blue-600 lg:text-white btn btn-default group-hover:text-blue-600 block hover:bg-gray-300 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-default hover:text-blue-600 block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
         <% else %>
-          <%= link_to "Login", new_user_session_path, class:"text-white lg:hidden group btn btn-default group-hover:text-blue-600 block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
+          <%= link_to "Login", new_user_session_path, class:"text-teal-500 lg:text-white lg:hidden group btn btn-default group-hover:text-blue-600 block hover:bg-gray-300 hover:text-blue-600 items-center tracking-tighter pl-8 font-mono py-1" %>
           <%= link_to "Register", new_user_registration_path, class:"lg:hidden btn btn-default hover:text-blue-600 block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
         <% end %>
       </div>
