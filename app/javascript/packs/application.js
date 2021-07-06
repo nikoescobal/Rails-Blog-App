@@ -23,3 +23,9 @@ window.onload = function () {
     menu.classList.toggle("hidden");
   });
 };
+
+$(document).on('turbolinks:load', function() {
+  setTimeout(function() {
+    $('.alert').fadeOut();
+  }, 3000);
+})
