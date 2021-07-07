@@ -2,7 +2,7 @@
   <div class="place-items-start grid xs:grid-cols-1 xs:grid-cols1 md:grid-cols-3 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-2">
     <% fetch_articles.each_with_index do |article, index| %>
       <% if index.odd? %>
-        <img src="/uploads/<%= article.image %>" class="object-cover lg:order-second w-full h-80 lg:even lg:odd" />
+        <%= image_tag "placeholder", class:"object-cover lg:order-second w-full h-80 lg:even lg:odd" %>
         <div class="flex-col space-y-4 mx-auto flex odd lg:order-first w-full">
           <div class="bg-teal-400 p-3 bg-opacity-70">
             <h2 class="items-center flex justify-center underline text-lg text-white" ><%= @category.name %></h2>
@@ -13,7 +13,7 @@
             <p><%= link_to 'Read More', article, class:"bg-yellow-300 hover:bg-yellow-400 p-2 rounded-full text-blue-600 hover:text-blue-800 text-xs italic btn btn-default hover:text-blue-900 shadow transition duration-500" %></p>
           </div>
         <% else %>
-          <img src="/uploads/<%= article.image %>" class="object-cover lg:order-first w-full h-80 lg:even lg:odd" />
+          <%= image_tag "placeholder", class:"object-cover lg:order-first w-full h-80 lg:even lg:odd" %>
           <div class="flex-col space-y-4 mx-auto flex even lg:order-second w-full">
             <div class="bg-teal-400 p-3 bg-opacity-70">
               <h2 class="items-center flex justify-center underline text-lg text-white" ><%= @category.name %></h2>

@@ -1,5 +1,8 @@
 <div class="h-full border-bluegray-100 bg-bluegray-100 bg-opacity-50 font-mono text-white">
-  <%= image_tag "/uploads/#{Article.find(params[:id]).image}", class: "bg-opacity-10 w-full object-cover absolute" %>
+  <div class="bg-opacity-10 w-full object-cover absolute">
+    <%= image_tag main_image(@article) %>
+  </div>
+  <%#= image_tag "/uploads/#{Article.find(params[:id]).image}", class: "bg-opacity-10 w-full object-cover absolute" %>
   <div class="md:py-2 space-y-4 lg:py-3 items-center flex flex-col bg-teal-500 group">
     <h1 class="bg-teal-500 p-6 rounded bg-opacity-50 text-3xl lg:text-6xl md:text-4xl items-center relative flex text-center"><%= @article.title %></h1>
     <h3 class="bg-gradient-to-b from-transparent to-blue-700 bg-opacity-30 hover:bg-opacity-70 group text-md flex relative justify-center items-center text-center pt-16 px-16 md:pt-20 md:px-20 lg:px-30 lg:pt-30 w-full text-white whitespace-pre-line"><%= @article.text %></h3>
