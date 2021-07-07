@@ -2,10 +2,10 @@
   <div class="flex items-center space-y-3 py-3 flex-col h-full">
     <%= render 'shared/errors', object: article %>
     <%= f.label :title, class:"text-lg font-bold" %>
-    <%= f.text_field :title, autofocus: true, class:"focus:outline-white px-40 text-lg" %>
+    <%= f.text_field :title, autofocus: true, class:"focus:outline-white w-96 text-lg" %>
     <%= f.label :text, class:"text-lg font-bold" %>
     <div class="pb-3">
-      <%= f.text_field :text, rows: 7, autofocus: true, class:"focus:outline-white text-lg px-40 py-14" %>
+      <%= f.text_area :text, rows: 7, autofocus: true, class:"focus:outline-white text-lg w-96 h-36 text" %>
     </div>
     <div class="px-4 py-3 my-3 bg-gray-100 rounded-full">
       <%= f.label :image, class: "px-4 py-3" %>
