@@ -1,6 +1,6 @@
 <div class="h-full border-bluegray-100 bg-bluegray-100 bg-opacity-50 font-mono text-white">
   <div class="bg-opacity-10 w-full object-cover absolute">
-    <%= image_tag main_image(@article) %>
+    <%= main_image(@article, false) %>
   </div>
   <%#= image_tag "/uploads/#{Article.find(params[:id]).image}", class: "bg-opacity-10 w-full object-cover absolute" %>
   <div class="md:py-2 space-y-4 lg:py-3 items-center flex flex-col bg-teal-500 group">
