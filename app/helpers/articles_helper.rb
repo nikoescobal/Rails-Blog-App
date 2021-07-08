@@ -5,7 +5,7 @@ module ArticlesHelper
       if is_main
         image_tag article.main_image, class: 'h-full w-full object-cover'
       else
-        image_tag article.main_image, class: 'object-cover h-64 md:w-full lg:w-full group-hover:scale-110'
+        image_tag article.main_image, class: 'object-cover h-full md:w-full lg:w-full group-hover:scale-110'
       end
     else
       image_tag 'placeholder'
