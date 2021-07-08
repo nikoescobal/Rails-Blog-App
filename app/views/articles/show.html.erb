@@ -20,9 +20,6 @@
           </div>
           <div class="flex space-x-4">
             <%= link_to 'Back', articles_path, class:"text-white hover:underline hover:text-blue-500 bg:blue-300" %>
-            <%= link_to 'Edit', edit_article_path(@article), class: "hover:underline text-white hover:text-blue-200" %>
-            <%= link_to 'Delete', @article, class: "button", class:"hover:underline text-white hover:text-red-500", method: :delete,  remote: true,
-                        data: { confirm: "Are you sure?" } %>
           </div>
         </section>
       </div>
