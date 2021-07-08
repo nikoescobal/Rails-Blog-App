@@ -10,6 +10,6 @@ class Article < ApplicationRecord
   validates :title, presence: true
   validates :text, length: { minimum: 15 }
 
-  scope :sort_by_votes, -> { sort_by{ |article| article.votes.count}.reverse }
+  scope :ordered_by_votes, -> { sort_by{ |article| article.votes.count}.reverse }
 
 end

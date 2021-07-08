@@ -1,6 +1,6 @@
 <div class="font-mono">
   <div class="h-96 border-bluegray-100 relative font-mono">
-    <%= main_image(first_article, true) %>
+    <%= main_image(most_voted_article, true) %>
     <div class="md:p-2 space-y-4 lg:p-3 rounded absolute bottom-0 left-0 flex flex-col justify-center w-1/4 group bg-teal-100 bg-opacity-30 group hover:bg-opacity-0">
       <h2 class="flex justify-center font-bold text-lg p-2 text-white rounded bg-teal-400 group-hover:bg-teal-500 shadow group-hover:bg-opacity-80 "><%= @articles.first.title %></h2>
       <div class="flex py-2 space-y-2 justify-between items-center text-white lg:flex lg:flex-row flex-wrap md:flex-col">

@@ -12,8 +12,8 @@ module ArticlesHelper
     end
   end
 
-  def first_article
-    @articles.sort_by_votes.first
+  def most_voted_article
+    @articles.ordered_by_votes.first
   end
 
   def highest_ranked_categories

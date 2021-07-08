@@ -1,6 +1,6 @@
 module CategoriesHelper
   def fetch_articles
-    @category.articles.with_attached_main_image.order('created_at desc')
+    @category.articles.with_attached_main_image.order('created_at desc').includes([:user])
   end
 
   def main_image(fetch_articles, is_even)
