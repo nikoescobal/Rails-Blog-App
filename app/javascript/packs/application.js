@@ -22,10 +22,8 @@ window.onload = function () {
   a.addEventListener("click", () => {
     menu.classList.toggle("hidden");
   });
+  $(document).on('turbolinks:load', function () {
+    $(".notice").delay(3000).fadeOut(1000);
+    $(".alert").delay(3000).fadeOut(1000);
+  });
 };
-
-$(document).on('turbolinks:load', function() {
-  setTimeout(function() {
-    $('.alert').fadeOut();
-  }, 3000);
-})

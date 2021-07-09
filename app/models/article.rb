@@ -9,6 +9,7 @@ class Article < ApplicationRecord
 
   validates :title, presence: true
   validates :text, length: { minimum: 15 }
+  validates :category_ids, presence: { message: "Select at least 1 category" }
 
   scope :ordered_by_votes, -> { sort_by{ |article| article.votes.count}.reverse }
 

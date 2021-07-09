@@ -32,24 +32,21 @@ class ArticlesController < ApplicationController
 
   # POST /articles or /articles.json
   def create
-    uploaded_io = article_params[:image]
-      File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-        file.write(uploaded_io.read)
-        params[:article][:image] = uploaded_io.original_filename
+  @article = current_user.articles.build(article_params)
+
+    if @article.save
+      respond_to do |format|
+        if @article.save
+          format.html { redirect_to @article, notice: "Article successfully created." }
+          format.json { render :show, status: :created, location: @article }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @article.errors, status: :unprocessable_entity }
         end
-
-    @article = current_user.articles.build(article_params)
-
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to @article, notice: "Article successfully created." }
-        format.json { render :show, status: :created, location: @article }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
   end
+  
 
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
@@ -81,6 +78,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def article_params
-      params.require(:article).permit(:title, :main_image, :text)
+      params.require(:article).permit(:title, :main_image, :text, category_ids: [])
     end
 end
