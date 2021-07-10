@@ -45,6 +45,7 @@ group :development do
   gem 'spring'
   gem 'hirb'
   gem 'devise'
+  gem 'acts-as-taggable-on', '~> 7.0'
 end
 
 group :test do
