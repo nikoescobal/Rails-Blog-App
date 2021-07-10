@@ -1,6 +1,6 @@
 <div class="h-full border-bluegray-100 bg-bluegray-100 bg-opacity-50 font-mono text-white">
-  <div class="bg-opacity-10 w-full object-cover absolute article-show" style="background-image: url('<%= url_for(@article.main_image) %>');"  >
-    <%#= main_image(@article, false) %>
+  <div class="bg-opacity-10 w-full object-cover absolute article-show" >
+    <%= main_image(@article, false) %>
   </div>
   <div class="md:py-2 space-y-4 lg:py-3 items-center flex flex-col bg-teal-500 group">
     <h1 class="bg-teal-500 p-6 rounded bg-opacity-50 text-3xl lg:text-6xl md:text-4xl items-center relative flex text-center"><%= @article.title %></h1>

@@ -42,12 +42,12 @@ input[type="file"] {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.article-show {
+/* .article-show {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100%;
-}
+} */
 
 .index-images {
   background-position: center;

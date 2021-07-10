@@ -3,7 +3,7 @@
     <% fetch_articles.each_with_index do |article, index| %>
       <% if index % 4 < 2 %>
         <div class="grid sm:grid-cols-1 lg:grid-cols-2 grid-cols-1 w-full h-full">
-          <%= main_image(article) %>
+          <%= category_image(article) %>
           <div class="flex-col space-y-4 mx-auto flex w-full">
             <div class="bg-teal-400 p-3 bg-opacity-70">
               <h2 class="items-center flex justify-center underline text-lg text-white" ><%= @category.name %></h2>
@@ -27,7 +27,7 @@
               <p><%= link_to 'Read More', article, class:"bg-yellow-300 hover:bg-yellow-400 p-2 rounded-full text-blue-600 hover:text-blue-800 text-xs italic btn btn-default hover:text-blue-900 shadow transition duration-500" %></p>
             </div>
           </div>
-          <%= main_image(article) %>
+          <%= category_image(article) %>
         </div>
       <% end %>
     <% end %>
