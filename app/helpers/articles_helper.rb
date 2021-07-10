@@ -5,10 +5,10 @@ module ArticlesHelper
       if is_main
         image_tag article.main_image, class: 'h-full max-h-full min-h-96 w-full object-cover'
       else
-        image_tag article.main_image, class: 'object-cover min-h-64 max-h-full h-full md:w-full lg:w-full group-hover:scale-110'
+        image_tag article.main_image, class: 'object-cover h-64 max-h-full h-full md:w-full lg:w-full group-hover:scale-110'
       end
     else
-      image_tag 'placeholder'
+      image_tag 'placeholder object-cover w-full h-64'
     end
   end
 
