@@ -12,7 +12,7 @@ user3 = User.create!(email: 'blake@gmail.com', password: '123456', password_conf
 user4 = User.create!(email: 'jack@gmail.com', password: '123456', password_confirmation: '123456', username:"jack")
 user5 = User.create!(email: 'isabel@gmail.com', password: '123456', password_confirmation: '123456', username:"isabel")
 
-user1.articles.create!(title: 'The Art Of Sushi',
+x = user1.articles.create!(title: 'The Art Of Sushi',
 text: 'Sushi is a multidisciplinary craft that produces a multisensory work of art. Visual eminence is not the only aspect of sushi which a student has to learn about before they can become a master of sushi. The taste of the sushi is just as important; the fish must be fresh, and no ingredient should be overpowering. Sushi is an act of balancing tastes so that everything works together to become a masterpiece.
 
 Sushi, although a simple dish in theory, is actually difficult to perfect–with sushi chefs spending years training to master it. In many ways, sushi is an art form and not everyone can get the technique down.
@@ -21,9 +21,11 @@ Sushi has been around since at least the fourth century, according to a Chinese 
 
 The more modern concept of sushi didn’t arrive until around the 1820s, when a man named Hanaya Yohei opened the first sushi stall in the city of Edo in Japan. He is credited as being the creator of modern nigiri sushi thanks to his development of a “fast food” sushi process. This process involved Yohei adding rice vinegar and salt to cooked rice and then topping it with a slice of raw fish, fresh from the bay.
 
-Sushi was finally brought to America in 1966, when a man named Noritoshi Kanai and his Jewish business partner, Harry Wolff, opened Kawafuku Restaurant in Little Tokyo, Los Angeles. Their restaurant was the first to offer traditional nigiri sushi to Americans. It was incredibly successful with Japanese businessmen, who then introduced it to their American colleagues and friends.', image: 'sushiboat.jpeg')
+Sushi was finally brought to America in 1966, when a man named Noritoshi Kanai and his Jewish business partner, Harry Wolff, opened Kawafuku Restaurant in Little Tokyo, Los Angeles. Their restaurant was the first to offer traditional nigiri sushi to Americans. It was incredibly successful with Japanese businessmen, who then introduced it to their American colleagues and friends.', category_ids:[7])
 
-user2.articles.create!(title: 'How To Drink Sake',
+x.main_image.attach(io: File.open('./app/assets/seed_images/sushiboat.jpeg'),filename:'sushiboat.jpeg')
+
+x = user2.articles.create!(title: 'How To Drink Sake',
 text: 'Sake is a Japanese drink that is made by fermenting rice. It is often referred to as a wine but is brewed quite differently. Also, the Alcohol by Volume (ABV) of sake is far higher than that of wine or beer. The sake rice is milled so that it mostly contains starch. To the rice mash, fungus is added and it helps to convert the starch into sugar. Thereafter, the sugar is allowed to ferment in the presence of yeast.
 
 The taste, aroma and quality of sake are dependent on the fermentation process. The amount of rice that is milled is one of the crucial factors that determine the type of sake that is produced. The more the milled sake rice, the more delicate and clear the flavor of the drink.
@@ -32,9 +34,12 @@ The addition of brewer’s alcohol to the fermented alcohol is another important
 
 Sake is quite enjoyable with food. Some people think that it should not be served with sushi because of the presence of rice in both, food and drink. However, there are no rules to suggest that you cannot enjoy your brew as you relish your sushi. The drink goes down particularly well with spicy dishes. The contrast in flavors is rather interesting and pleasurable. Experts recommend Junmai with seafood and sushi, while Junmai Daiginjo goes well with meats.
 
-Sake is most loosely described as a “rice wine” and while it is exactly that, it is also much more than that. Sake has a unique taste which cannot be compared to any other wine in the world, except perhaps some of the so-called Korean Village Wines (the home-made type). It is completely compati­ble with the extremely delicate palate of the Japanese people and blends perfectly with the flavor of their traditional dishes', image: 'sake.jpeg')
+Sake is most loosely described as a “rice wine” and while it is exactly that, it is also much more than that. Sake has a unique taste which cannot be compared to any other wine in the world, except perhaps some of the so-called Korean Village Wines (the home-made type). It is completely compati­ble with the extremely delicate palate of the Japanese people and blends perfectly with the flavor of their traditional dishes', category_ids:[1])
 
-user3.articles.create!(title: 'Cosmopolitan101',
+x.main_image.attach(io: File.open('./app/assets/seed_images/sake.jpeg'),filename:'sake.jpeg')
+
+
+x = user3.articles.create!(title: 'Cosmopolitan101',
 text: 'The pandemic has caused the largest and fastest decline in international flows — including trade, foreign direct investment, and international travel — in modern history. While these numbers imply a major rollback of globalization’s recent gains, they don’t necessarily signal a fundamental collapse of international market integration. But how deep will the plunge really be? 
 
 How fast can we expect global flows to rebound? And how might future flow patterns look different from the past? Leaders can find clues about the future and actionable implications for their companies by focusing on five key drivers of globalization’s trajectory: 1. global growth patterns; 2. supply-chain policies; 3. superpower frictions and fragility; 4. ongoing technical shifts; and 5. public opinion.
@@ -43,7 +48,7 @@ As leaders wrestle to guide their organizations through the Covid-19 pandemic, d
 
 Now more than ever, the world needs to be more united. The effects of covid-19 have left millions dead, leaving families grieving, and economies bleeding. It is precisely in these times that one needs to become a citizen of the world To become a cosmopoltan means to have the openness and empathy to respect, appreciate, and support international policies, cultures, and growth.
 
-In conclusion, Covid-19 looks like a “bend but won’t break crisis” for globalization. International flows are plummeting, but globalization — and opposition to globalization — will continue to present business opportunities and challenges. Careful attention to the drivers of globalization’s future can help companies navigate through and even profit from globalization’s turbulence. A volatile world of partially connected national economies expands possibilities for global strategy even as it complicates the management of multinational firms. Now is the time for global corporations to show their value by harnessing the best of the world’s capabilities to end the pandemic and bolster the recovery.', image: 'cosmopolitan.jpeg')
+In conclusion, Covid-19 looks like a “bend but won’t break crisis” for globalization. International flows are plummeting, but globalization — and opposition to globalization — will continue to present business opportunities and challenges. Careful attention to the drivers of globalization’s future can help companies navigate through and even profit from globalization’s turbulence. A volatile world of partially connected national economies expands possibilities for global strategy even as it complicates the management of multinational firms. Now is the time for global corporations to show their value by harnessing the best of the world’s capabilities to end the pandemic and bolster the recovery.', category_ids:[5])
 
 user4.articles.create!(title: 'Rise Of The Nomad',
 text: "While Covid-19 has left governments reeling, people dying, and millions affected negatively, it is also fair to say that not all the effects have been bad -- in fact, it's precisely because of this pandemic that a massive shift to remote work started to happen. With people prioritizing their health and safety, the appeal to become a digital nomad is very real. In fact, the pandemic accelerated the trend towards digital nomadism, despite travel restrictions.
