@@ -10,8 +10,7 @@ class Article < ApplicationRecord
   validates :title, presence: true
   validates :text, length: { minimum: 15 }
   validates :category_ids, presence: { message: "Select at least 1 category" }
-  validates :main_image, attached: true, content_type: 'image/png',
-                                     dimension: { width: 200, height: 200 }
+
   
 
   scope :ordered_by_votes, -> { sort_by{ |article| article.votes.count}.reverse }
