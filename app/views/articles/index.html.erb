@@ -11,7 +11,7 @@
   </div>
   <div class="flex flex-row bg-gray-300 flex-wrap">
     <% highest_ranked_categories.each_with_index do |category, index| %>
-      <div class="w-1/4 min-h-full relative group">
+      <div class="w-1/4 h-64 nax-h-full relative group">
         <%= main_image(category.articles.last, false) %>
         <div class="p-2 rounded h-full absolute bottom-0 bg-teal-100 bg-opacity-30 group hover:bg-opacity-0 w-full md:space-y-1 lg:space-y-2 flex flex-col justify-between shadow transition duration-500">
           <div class="bg-blue-400 group-hover:bg-teal-500 shadow group-hover:bg-opacity-80 w-1/3 items-center p-2 flex justify-center rounded shadow transition duration-500">

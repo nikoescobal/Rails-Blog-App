@@ -45,6 +45,7 @@ group :development do
   gem 'spring'
   gem 'hirb'
   gem 'devise'
+  gem 'activestorage-validator'
 end
 
 group :test do
