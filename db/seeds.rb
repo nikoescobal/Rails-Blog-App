@@ -12,7 +12,29 @@ user3 = User.create!(email: 'blake@gmail.com', password: '123456', password_conf
 user4 = User.create!(email: 'jack@gmail.com', password: '123456', password_confirmation: '123456', username:"jack")
 user5 = User.create!(email: 'isabel@gmail.com', password: '123456', password_confirmation: '123456', username:"isabel")
 
-x = user1.articles.create!(title: 'The Art Of Sushi',
+Category.create(name: 'Drink', priority: 1)
+Category.create(name: 'Music', priority: 2)
+Category.create(name: 'Art', priority: 3)
+Category.create(name: 'History', priority: 4)
+Category.create(name: 'Travel', priority: 5)
+Category.create(name: 'Business', priority: 6)
+Category.create(name: 'Food', priority: 7)
+
+ArticleCategory.create(article_id:1, category_id:7)
+ArticleCategory.create(article_id:2, category_id:1)
+ArticleCategory.create(article_id:3, category_id:5)
+ArticleCategory.create(article_id:4, category_id:6)
+ArticleCategory.create(article_id:5, category_id:2)
+ArticleCategory.create(article_id:6, category_id:3)
+ArticleCategory.create(article_id:7, category_id:4)
+ArticleCategory.create(article_id:8, category_id:2)
+ArticleCategory.create(article_id:9, category_id:2)
+ArticleCategory.create(article_id:10, category_id:2)
+
+Vote.create(user_id:1, article_id:1)
+Vote.create(user_id:2, article_id:1)
+
+a = user1.articles.create!(title: 'The Art Of Sushi',
 text: 'Sushi is a multidisciplinary craft that produces a multisensory work of art. Visual eminence is not the only aspect of sushi which a student has to learn about before they can become a master of sushi. The taste of the sushi is just as important; the fish must be fresh, and no ingredient should be overpowering. Sushi is an act of balancing tastes so that everything works together to become a masterpiece.
 
 Sushi, although a simple dish in theory, is actually difficult to perfect–with sushi chefs spending years training to master it. In many ways, sushi is an art form and not everyone can get the technique down.
@@ -23,9 +45,9 @@ The more modern concept of sushi didn’t arrive until around the 1820s, when a 
 
 Sushi was finally brought to America in 1966, when a man named Noritoshi Kanai and his Jewish business partner, Harry Wolff, opened Kawafuku Restaurant in Little Tokyo, Los Angeles. Their restaurant was the first to offer traditional nigiri sushi to Americans. It was incredibly successful with Japanese businessmen, who then introduced it to their American colleagues and friends.', category_ids:[7])
 
-x.main_image.attach(io: File.open('./app/assets/seed_images/sushiboat.jpeg'),filename:'sushiboat.jpeg')
+a.main_image.attach(io: File.open('./app/assets/seed_images/sushiboat.jpeg'),filename:'sushiboat.jpeg')
 
-x = user2.articles.create!(title: 'How To Drink Sake',
+b = user2.articles.create!(title: 'How To Drink Sake',
 text: 'Sake is a Japanese drink that is made by fermenting rice. It is often referred to as a wine but is brewed quite differently. Also, the Alcohol by Volume (ABV) of sake is far higher than that of wine or beer. The sake rice is milled so that it mostly contains starch. To the rice mash, fungus is added and it helps to convert the starch into sugar. Thereafter, the sugar is allowed to ferment in the presence of yeast.
 
 The taste, aroma and quality of sake are dependent on the fermentation process. The amount of rice that is milled is one of the crucial factors that determine the type of sake that is produced. The more the milled sake rice, the more delicate and clear the flavor of the drink.
@@ -36,10 +58,10 @@ Sake is quite enjoyable with food. Some people think that it should not be serve
 
 Sake is most loosely described as a “rice wine” and while it is exactly that, it is also much more than that. Sake has a unique taste which cannot be compared to any other wine in the world, except perhaps some of the so-called Korean Village Wines (the home-made type). It is completely compati­ble with the extremely delicate palate of the Japanese people and blends perfectly with the flavor of their traditional dishes', category_ids:[1])
 
-x.main_image.attach(io: File.open('./app/assets/seed_images/sake.jpeg'),filename:'sake.jpeg')
+b.main_image.attach(io: File.open('./app/assets/seed_images/sake.jpeg'),filename:'sake.jpeg')
 
 
-x = user3.articles.create!(title: 'Cosmopolitan101',
+c = user3.articles.create!(title: 'Cosmopolitan101',
 text: 'The pandemic has caused the largest and fastest decline in international flows — including trade, foreign direct investment, and international travel — in modern history. While these numbers imply a major rollback of globalization’s recent gains, they don’t necessarily signal a fundamental collapse of international market integration. But how deep will the plunge really be? 
 
 How fast can we expect global flows to rebound? And how might future flow patterns look different from the past? Leaders can find clues about the future and actionable implications for their companies by focusing on five key drivers of globalization’s trajectory: 1. global growth patterns; 2. supply-chain policies; 3. superpower frictions and fragility; 4. ongoing technical shifts; and 5. public opinion.
@@ -50,10 +72,10 @@ Now more than ever, the world needs to be more united. The effects of covid-19 h
 
 In conclusion, Covid-19 looks like a “bend but won’t break crisis” for globalization. International flows are plummeting, but globalization — and opposition to globalization — will continue to present business opportunities and challenges. Careful attention to the drivers of globalization’s future can help companies navigate through and even profit from globalization’s turbulence. A volatile world of partially connected national economies expands possibilities for global strategy even as it complicates the management of multinational firms. Now is the time for global corporations to show their value by harnessing the best of the world’s capabilities to end the pandemic and bolster the recovery.', category_ids:[5])
 
-x.main_image.attach(io: File.open('./app/assets/seed_images/cosmopolitan.jpeg'),filename:'cosmopolitan.jpeg')
+c.main_image.attach(io: File.open('./app/assets/seed_images/cosmopolitan.jpeg'),filename:'cosmopolitan.jpeg')
 
 
-x = user4.articles.create!(title: 'Rise Of The Nomad',
+d = user4.articles.create!(title: 'Rise Of The Nomad',
 text: "While Covid-19 has left governments reeling, people dying, and millions affected negatively, it is also fair to say that not all the effects have been bad -- in fact, it's precisely because of this pandemic that a massive shift to remote work started to happen. With people prioritizing their health and safety, the appeal to become a digital nomad is very real. In fact, the pandemic accelerated the trend towards digital nomadism, despite travel restrictions.
 
 The Covid-19 pandemic has rewritten the rules governing work, with employees choosing to ditch the office permanently in favour of remote work. While many are leaving cities to settle in more affordable and spacious locations, a small but growing number are taking the opportunity to become ‘digital nomads’, remote workers who travel the world. For employers, this tech-savvy community is a potential source of affordable digital skills – and governments are beginning to make it easier for digital nomads to work in their countries.
@@ -66,10 +88,10 @@ Digital nomadism is likely to be one dimension of a broader global redistributio
 
 But for the time being, there are still reasons why employers might favour digital nomads over conventional offshoring, Frey adds. “A more significant barrier to offshoring than digital infrastructure is language,” he says. “Machine translation is improving rapidly but language and culture matter enormously for trade in services.”", category_ids:[6])
 
-x.main_image.attach(io: File.open('./app/assets/seed_images/nomad.jpeg'),filename:'nomad.jpeg')
+d.main_image.attach(io: File.open('./app/assets/seed_images/nomad.jpeg'),filename:'nomad.jpeg')
 
 
-x = user4.articles.create!(title: 'What is Math Rock?',
+e = user4.articles.create!(title: 'What is Math Rock?',
 text: "Math rock is just as eccentric as it sounds - It’s a bit like a mathematician dabbling with musical chords, strings, and notations and coming up with something genius. The results are phenomenally varied and unique. In India, where artists and bands are constantly experimenting and innovating, math rock is an exciting world worth entering. 
 
 By the 90s, Math Rock was a known genre and many new bands were popping up. In Europe, bands such as Kebong (Poland), The Redneck Manifesto (Ireland), and Uzeda (Italy) were some. In the United States, bands were mostly from San Diego (Upsilon Acrux, Drive like Jehu, No Knife) and Northern California (The well-known Game Theory and The Loud Family). As far as contemporary math rock is concerned, bands such as Slint, Chavez, and Shellac, which were formed in the 1990s, continue to tour and release albums today. The newest crop of bands, such as Battles and Tall Ships, continue to enjoy renewed listener interest. 
@@ -80,10 +102,10 @@ As you might have guessed by now, this is not your conventional music where rhyt
 
 Imagine this: one, two, three, four; one, two, three, four – this is a regular 4/4 time signature every mainstream artist from Lil Wayne to Aerosmith would use for their songs. But in math rock, the beats would go – one, two, three, four, five, six, seven; one, two, three, four, five, six, seven, eight – the time signature is irregular.", category_ids:[2])
 
-x.main_image.attach(io: File.open('./app/assets/seed_images/chon.jpeg'),filename:'chon.jpeg')
+e.main_image.attach(io: File.open('./app/assets/seed_images/chon.jpeg'),filename:'chon.jpeg')
 
 
-user5.articles.create!(title: 'Decoding The Creation Of Adam',
+f = user5.articles.create!(title: 'Decoding The Creation Of Adam',
 text: "The most famous section of the Sistine Chapel ceiling is Michelangelo’s Creation of Adam.  This scene is located next to the Creation of Eve, which is the panel at the center of the room, and the Congregation of the Waters, which is closer to the altar.
 
 The Creation of Adam is a fresco painting by Italian artist Michelangelo, which forms part of the Sistine
@@ -96,10 +118,10 @@ One of the questions that has been raised about this scene is the identity of th
 
 In all, the painting shows several hallmarks of Michelangelo’s painting style: the lounging position of both Adam and God, the use of bodies which are both muscular and twisting, and the painting of figures who come across as works of sculpture. It is good to remember that Michelangelo was, after all, a sculptor.  Painting was not his primary area.", category_ids:[3])
 
-x.main_image.attach(io: File.open('./app/assets/seed_images/art.jpeg'),filename:'art.jpeg')
+f.main_image.attach(io: File.open('./app/assets/seed_images/art.jpeg'),filename:'art.jpeg')
 
 
-x = user2.articles.create!(title: 'The Most Influential Person In History',
+g = user2.articles.create!(title: 'The Most Influential Person In History',
 text: "Among the influences that shaped Western Civilization, there’s probably no story more significant than the “Jesus Story.” Even for religious skeptics, the historical influence of Jesus of Nazareth is the result of arguably the most influential life ever lived.
 
 But why…?
@@ -124,10 +146,10 @@ For some reason, Jesus became more and more of a perceived threat to the “orga
 
 Indeed, about one-third of the world is considered “Christian” today. That’s a pretty staggering number – that’s a pretty influential life after nearly 2,000 years. Yes, some religious institutions have confused and cluttered the original message of Jesus over the centuries, but his simple life and powerful words still speak for themselves.", category_ids:[4])
 
-x.main_image.attach(io: File.open('./app/assets/seed_images/jesus.jpeg'),filename:'jesus.jpeg')
+g.main_image.attach(io: File.open('./app/assets/seed_images/jesus.jpeg'),filename:'jesus.jpeg')
 
 
-x = user2.articles.create!(title: 'Classical Music for Beginners',
+h = user2.articles.create!(title: 'Classical Music for Beginners',
 text: "Listening to classical music can be an enlightening, inspiring or relaxing experience, depending on your mood and what you’re listening to. But you can’t just play a song and immediately enjoy and understand it — like you can with pop music. Appreciating and taking pleasure in classical music takes time and effort, but it’s something everyone can do. Whether you’ve dabbled in a little classical music before or you’ve never heard a single note, here’s everything you need to know about how to listen to classical music.
   
 What defines classical music?
@@ -139,10 +161,10 @@ Classical music lives on today, with composers writing scores for film productio
 
 Listening to classical music isn’t just an enjoyable hobby for people who like the genre. Scientific studies have proven there’s a host of benefits you can gain if you embrace the classical composers. ", category_ids:[2])
 
-x.main_image.attach(io: File.open('./app/assets/seed_images/satie.jpeg'),filename:'satie.jpeg')
+h.main_image.attach(io: File.open('./app/assets/seed_images/satie.jpeg'),filename:'satie.jpeg')
 
 
-x = user5.articles.create!(title: 'Coachella: Redefining Live Music',
+i = user5.articles.create!(title: 'Coachella: Redefining Live Music',
 text: "The Coachella Valley Music and Arts Festival is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert. It was co-founded by Paul Tollett and Rick Van Santen in 1999, and is organized by Goldenvoice, a subsidiary of AEG Presents.
   
 The origin of the name Coachella is unclear. Some locals believe it was a misspelling of Conchilla, a Spanish word for the small white snail shells found in the valley's sandy soil, vestiges of a lake that dried up over 3,000 years ago.
@@ -153,10 +175,10 @@ If you wanted to throw this party yourself, it would cost you $50M. But you can 
 
 Coachella has become the bread and butter of music festivals. Known for its stacked, star-studded lineups, fashion trends and hippie-style camping experience in the deserts of Indio, the festival has developed a culture of its own. ", category_ids:[2])
 
-x.main_image.attach(io: File.open('./app/assets/seed_images/coachella.jpeg'),filename:'coachella.jpeg')
+i.main_image.attach(io: File.open('./app/assets/seed_images/coachella.jpeg'),filename:'coachella.jpeg')
 
 
-x = user5.articles.create!(title: 'How K-Pop Shook The World',
+j = user5.articles.create!(title: 'How K-Pop Shook The World',
 text: "It is 1992, and three young men in a boy band are performing in a live television talent contest. The sound is new: Korean lyrics, Euro pop, African American hip-hop and rap. They dance in sync. The studio audience goes wild. The judges in their prim suits are less impressed. They reveal their scorecards. The band gets the lowest mark of the night, and is voted off the show
 
 The judges couldn't have got it more wrong.
@@ -171,27 +193,6 @@ It showed that you could be big and not sing entirely in English or be in vogue.
 
 So, how did K-pop conquer the world? Clever design and brilliant marketing. But there's more to a K-pop band. It's an expression of Korean culture, and the government has been more than happy to capitalise on its success.", category_ids:[2])
 
-x.main_image.attach(io: File.open('./app/assets/seed_images/blackpink.jpeg'),filename:'blackpink.jpeg')
+j.main_image.attach(io: File.open('./app/assets/seed_images/blackpink.jpeg'),filename:'blackpink.jpeg')
 
 
-Category.create(name: 'Drink', priority: 1)
-Category.create(name: 'Music', priority: 2)
-Category.create(name: 'Art', priority: 3)
-Category.create(name: 'History', priority: 4)
-Category.create(name: 'Travel', priority: 5)
-Category.create(name: 'Business', priority: 6)
-Category.create(name: 'Food', priority: 7)
-
-ArticleCategory.create(article_id:1, category_id:7)
-ArticleCategory.create(article_id:2, category_id:1)
-ArticleCategory.create(article_id:3, category_id:5)
-ArticleCategory.create(article_id:4, category_id:6)
-ArticleCategory.create(article_id:5, category_id:2)
-ArticleCategory.create(article_id:6, category_id:3)
-ArticleCategory.create(article_id:7, category_id:4)
-ArticleCategory.create(article_id:8, category_id:2)
-ArticleCategory.create(article_id:9, category_id:2)
-ArticleCategory.create(article_id:10, category_id:2)
-
-Vote.create(user_id:1, article_id:1)
-Vote.create(user_id:2, article_id:1)

@@ -30,6 +30,8 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
   end
 
+
+
   # POST /articles or /articles.json
   def create
   @article = current_user.articles.build(article_params)
@@ -45,6 +47,7 @@ class ArticlesController < ApplicationController
       end
     end
   
+    
 
   # PATCH/PUT /articles/1 or /articles/1.json
   def update
