@@ -34,7 +34,6 @@ class ArticlesController < ApplicationController
   def create
   @article = current_user.articles.build(article_params)
 
-    if @article.save
       respond_to do |format|
         if @article.save
           format.html { redirect_to @article, notice: "Article successfully created." }
@@ -45,7 +44,6 @@ class ArticlesController < ApplicationController
         end
       end
     end
-  end
   
 
   # PATCH/PUT /articles/1 or /articles/1.json

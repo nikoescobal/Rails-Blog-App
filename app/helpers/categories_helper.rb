@@ -5,7 +5,7 @@ module CategoriesHelper
 
   def category_image(fetch_articles)
     if fetch_articles.main_image.attached?
-      image_tag fetch_articles.main_image, class:'object-cover order-first sm:order-first md:order-first lg:order-none w-full h-96 max-h-full lg:h-full'
+      image_tag fetch_articles.main_image, class:'object-cover order-first sm:order-first md:order-first lg:order-none w-full h-64 max-h-full lg:h-full'
     else
       image_tag 'placeholder'
     end
