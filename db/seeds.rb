@@ -50,7 +50,10 @@ Now more than ever, the world needs to be more united. The effects of covid-19 h
 
 In conclusion, Covid-19 looks like a “bend but won’t break crisis” for globalization. International flows are plummeting, but globalization — and opposition to globalization — will continue to present business opportunities and challenges. Careful attention to the drivers of globalization’s future can help companies navigate through and even profit from globalization’s turbulence. A volatile world of partially connected national economies expands possibilities for global strategy even as it complicates the management of multinational firms. Now is the time for global corporations to show their value by harnessing the best of the world’s capabilities to end the pandemic and bolster the recovery.', category_ids:[5])
 
-user4.articles.create!(title: 'Rise Of The Nomad',
+x.main_image.attach(io: File.open('./app/assets/seed_images/cosmopolitan.jpeg'),filename:'cosmopolitan.jpeg')
+
+
+x = user4.articles.create!(title: 'Rise Of The Nomad',
 text: "While Covid-19 has left governments reeling, people dying, and millions affected negatively, it is also fair to say that not all the effects have been bad -- in fact, it's precisely because of this pandemic that a massive shift to remote work started to happen. With people prioritizing their health and safety, the appeal to become a digital nomad is very real. In fact, the pandemic accelerated the trend towards digital nomadism, despite travel restrictions.
 
 The Covid-19 pandemic has rewritten the rules governing work, with employees choosing to ditch the office permanently in favour of remote work. While many are leaving cities to settle in more affordable and spacious locations, a small but growing number are taking the opportunity to become ‘digital nomads’, remote workers who travel the world. For employers, this tech-savvy community is a potential source of affordable digital skills – and governments are beginning to make it easier for digital nomads to work in their countries.
@@ -61,9 +64,12 @@ Digital nomads could therefore be an affordable source of in-demand technology s
 
 Digital nomadism is likely to be one dimension of a broader global redistribution of work following the pandemic and the resulting growth in remote work. “Jobs that can be done remotely can also be done offshore,” economist Carl Benedikt Frey told Tech Monitor last year. “In many cases, remote work is only a transitional phase before the next wave of offshoring as companies take advantage of new technologies, like telepresence, and cheaper labour in places like India.”
 
-But for the time being, there are still reasons why employers might favour digital nomads over conventional offshoring, Frey adds. “A more significant barrier to offshoring than digital infrastructure is language,” he says. “Machine translation is improving rapidly but language and culture matter enormously for trade in services.”", image: 'digitalnomad.jpeg')
+But for the time being, there are still reasons why employers might favour digital nomads over conventional offshoring, Frey adds. “A more significant barrier to offshoring than digital infrastructure is language,” he says. “Machine translation is improving rapidly but language and culture matter enormously for trade in services.”", category_ids:[6])
 
-user4.articles.create!(title: 'What is Math Rock?',
+x.main_image.attach(io: File.open('./app/assets/seed_images/nomad.jpeg'),filename:'nomad.jpeg')
+
+
+x = user4.articles.create!(title: 'What is Math Rock?',
 text: "Math rock is just as eccentric as it sounds - It’s a bit like a mathematician dabbling with musical chords, strings, and notations and coming up with something genius. The results are phenomenally varied and unique. In India, where artists and bands are constantly experimenting and innovating, math rock is an exciting world worth entering. 
 
 By the 90s, Math Rock was a known genre and many new bands were popping up. In Europe, bands such as Kebong (Poland), The Redneck Manifesto (Ireland), and Uzeda (Italy) were some. In the United States, bands were mostly from San Diego (Upsilon Acrux, Drive like Jehu, No Knife) and Northern California (The well-known Game Theory and The Loud Family). As far as contemporary math rock is concerned, bands such as Slint, Chavez, and Shellac, which were formed in the 1990s, continue to tour and release albums today. The newest crop of bands, such as Battles and Tall Ships, continue to enjoy renewed listener interest. 
@@ -72,7 +78,10 @@ Internationally, however, math rock is better recognised. It originated in the 1
 
 As you might have guessed by now, this is not your conventional music where rhythm is god and everything is based on a structure. This is math rock. It is defined by its abnormal time signatures and complex rhythm.
 
-Imagine this: one, two, three, four; one, two, three, four – this is a regular 4/4 time signature every mainstream artist from Lil Wayne to Aerosmith would use for their songs. But in math rock, the beats would go – one, two, three, four, five, six, seven; one, two, three, four, five, six, seven, eight – the time signature is irregular.", image: 'chon.jpeg')
+Imagine this: one, two, three, four; one, two, three, four – this is a regular 4/4 time signature every mainstream artist from Lil Wayne to Aerosmith would use for their songs. But in math rock, the beats would go – one, two, three, four, five, six, seven; one, two, three, four, five, six, seven, eight – the time signature is irregular.", category_ids:[2])
+
+x.main_image.attach(io: File.open('./app/assets/seed_images/chon.jpeg'),filename:'chon.jpeg')
+
 
 user5.articles.create!(title: 'Decoding The Creation Of Adam',
 text: "The most famous section of the Sistine Chapel ceiling is Michelangelo’s Creation of Adam.  This scene is located next to the Creation of Eve, which is the panel at the center of the room, and the Congregation of the Waters, which is closer to the altar.
@@ -85,9 +94,12 @@ Unlike the figure of God, who is outstretched and aloft, Adam is depicted as a l
 
 One of the questions that has been raised about this scene is the identity of the figures next to God.  Given her privileged placement under the arm of God, the female figure is presumably an important one.  Traditionally, she has been thought to be Eve, the future wife of Adam, who waits to the side until she is created out of Adam’s rib.  More recently, however, a theory has been floated that this is actually the Virgin Mary, who takes this place of honor next to God and the child next to her, who would therefore be the Christ Child.
 
-In all, the painting shows several hallmarks of Michelangelo’s painting style: the lounging position of both Adam and God, the use of bodies which are both muscular and twisting, and the painting of figures who come across as works of sculpture. It is good to remember that Michelangelo was, after all, a sculptor.  Painting was not his primary area.", image: 'art.jpeg')
+In all, the painting shows several hallmarks of Michelangelo’s painting style: the lounging position of both Adam and God, the use of bodies which are both muscular and twisting, and the painting of figures who come across as works of sculpture. It is good to remember that Michelangelo was, after all, a sculptor.  Painting was not his primary area.", category_ids:[3])
 
-user2.articles.create!(title: 'The Most Influential Person In History',
+x.main_image.attach(io: File.open('./app/assets/seed_images/art.jpeg'),filename:'art.jpeg')
+
+
+x = user2.articles.create!(title: 'The Most Influential Person In History',
 text: "Among the influences that shaped Western Civilization, there’s probably no story more significant than the “Jesus Story.” Even for religious skeptics, the historical influence of Jesus of Nazareth is the result of arguably the most influential life ever lived.
 
 But why…?
@@ -110,9 +122,12 @@ When Jesus was about 30-years-old, he started his public ministry around the Sea
 
 For some reason, Jesus became more and more of a perceived threat to the “organized religion” of the day.
 
-Indeed, about one-third of the world is considered “Christian” today. That’s a pretty staggering number – that’s a pretty influential life after nearly 2,000 years. Yes, some religious institutions have confused and cluttered the original message of Jesus over the centuries, but his simple life and powerful words still speak for themselves.", image: 'jesus.jpeg')
+Indeed, about one-third of the world is considered “Christian” today. That’s a pretty staggering number – that’s a pretty influential life after nearly 2,000 years. Yes, some religious institutions have confused and cluttered the original message of Jesus over the centuries, but his simple life and powerful words still speak for themselves.", category_ids:[4])
 
-user2.articles.create!(title: 'Classical Music for Beginners',
+x.main_image.attach(io: File.open('./app/assets/seed_images/jesus.jpeg'),filename:'jesus.jpeg')
+
+
+x = user2.articles.create!(title: 'Classical Music for Beginners',
 text: "Listening to classical music can be an enlightening, inspiring or relaxing experience, depending on your mood and what you’re listening to. But you can’t just play a song and immediately enjoy and understand it — like you can with pop music. Appreciating and taking pleasure in classical music takes time and effort, but it’s something everyone can do. Whether you’ve dabbled in a little classical music before or you’ve never heard a single note, here’s everything you need to know about how to listen to classical music.
   
 What defines classical music?
@@ -122,9 +137,12 @@ Although you don’t need to fully understand the definition of classical music 
     
 Classical music lives on today, with composers writing scores for film productions, orchestras, solo performers, etc. There are even some bands and artists performing today whose songs are greatly influenced by classical music — whether they realise it or not!
 
-Listening to classical music isn’t just an enjoyable hobby for people who like the genre. Scientific studies have proven there’s a host of benefits you can gain if you embrace the classical composers. ", image: 'satie.jpeg')
+Listening to classical music isn’t just an enjoyable hobby for people who like the genre. Scientific studies have proven there’s a host of benefits you can gain if you embrace the classical composers. ", category_ids:[2])
 
-user5.articles.create!(title: 'Coachella: Redefining Live Music',
+x.main_image.attach(io: File.open('./app/assets/seed_images/satie.jpeg'),filename:'satie.jpeg')
+
+
+x = user5.articles.create!(title: 'Coachella: Redefining Live Music',
 text: "The Coachella Valley Music and Arts Festival is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert. It was co-founded by Paul Tollett and Rick Van Santen in 1999, and is organized by Goldenvoice, a subsidiary of AEG Presents.
   
 The origin of the name Coachella is unclear. Some locals believe it was a misspelling of Conchilla, a Spanish word for the small white snail shells found in the valley's sandy soil, vestiges of a lake that dried up over 3,000 years ago.
@@ -133,9 +151,12 @@ Coachella showcases popular and established musical artists as well as emerging 
 
 If you wanted to throw this party yourself, it would cost you $50M. But you can attend for just $500. It's a great deal, and it's worth every penny. Unquestionably, Coachella is worth the price of admission.
 
-Coachella has become the bread and butter of music festivals. Known for its stacked, star-studded lineups, fashion trends and hippie-style camping experience in the deserts of Indio, the festival has developed a culture of its own. ", image: 'coachella.jpeg')
+Coachella has become the bread and butter of music festivals. Known for its stacked, star-studded lineups, fashion trends and hippie-style camping experience in the deserts of Indio, the festival has developed a culture of its own. ", category_ids:[2])
 
-user5.articles.create!(title: 'How K-Pop Shook The World',
+x.main_image.attach(io: File.open('./app/assets/seed_images/coachella.jpeg'),filename:'coachella.jpeg')
+
+
+x = user5.articles.create!(title: 'How K-Pop Shook The World',
 text: "It is 1992, and three young men in a boy band are performing in a live television talent contest. The sound is new: Korean lyrics, Euro pop, African American hip-hop and rap. They dance in sync. The studio audience goes wild. The judges in their prim suits are less impressed. They reveal their scorecards. The band gets the lowest mark of the night, and is voted off the show
 
 The judges couldn't have got it more wrong.
@@ -148,7 +169,10 @@ Psy was not a Korean version of a big pop star. Psy was Korea's version of Psy, 
 
 It showed that you could be big and not sing entirely in English or be in vogue. The power of the music video transcended language. Just one of the official videos of Gangnam Style on YouTube had well over three billion views, the largest number of hits of any video at that time.
 
-So, how did K-pop conquer the world? Clever design and brilliant marketing. But there's more to a K-pop band. It's an expression of Korean culture, and the government has been more than happy to capitalise on its success.", image: 'blackpink.jpeg')
+So, how did K-pop conquer the world? Clever design and brilliant marketing. But there's more to a K-pop band. It's an expression of Korean culture, and the government has been more than happy to capitalise on its success.", category_ids:[2])
+
+x.main_image.attach(io: File.open('./app/assets/seed_images/blackpink.jpeg'),filename:'blackpink.jpeg')
+
 
 Category.create(name: 'Drink', priority: 1)
 Category.create(name: 'Music', priority: 2)
