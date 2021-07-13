@@ -9,7 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
+  <body class="pb-2 mb-16">
     <%= render 'layouts/header', locals: {categories:@categories} %>
     <%= render "shared/flash_notice" %>
     <%= yield %>
