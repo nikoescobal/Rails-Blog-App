@@ -14,7 +14,7 @@ class Article < ApplicationRecord
 
   
 
-  scope :ordered_by_votes, -> { sort_by{ |article| article.votes.count}.reverse }
+  scope :ordered_by_votes, -> { sort_by{ |article| article.order(:vote_count)} }
 
   
 end

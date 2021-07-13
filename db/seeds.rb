@@ -6,11 +6,15 @@
 # movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 # Character.create(name: 'Luke', movie: movies.first)
 
+puts "creating users"
+
 user1 = User.create!(email: 'levi@gmail.com', password: '123456', password_confirmation: '123456', username:"levi")
 user2 = User.create!(email: 'aria@gmail.com', password: '123456', password_confirmation: '123456', username:"aria")
 user3 = User.create!(email: 'blake@gmail.com', password: '123456', password_confirmation: '123456', username:"blake")
 user4 = User.create!(email: 'jack@gmail.com', password: '123456', password_confirmation: '123456', username:"jack")
 user5 = User.create!(email: 'isabel@gmail.com', password: '123456', password_confirmation: '123456', username:"isabel")
+
+puts "creating categories"
 
 Category.create(name: 'Drink', priority: 1)
 Category.create(name: 'Music', priority: 2)
@@ -19,6 +23,8 @@ Category.create(name: 'History', priority: 4)
 Category.create(name: 'Travel', priority: 5)
 Category.create(name: 'Business', priority: 6)
 Category.create(name: 'Food', priority: 7)
+
+puts "creating article categories"
 
 ArticleCategory.create(article_id:1, category_id:7)
 ArticleCategory.create(article_id:2, category_id:1)
@@ -31,8 +37,13 @@ ArticleCategory.create(article_id:8, category_id:2)
 ArticleCategory.create(article_id:9, category_id:2)
 ArticleCategory.create(article_id:10, category_id:2)
 
+puts "creating votes"
+
 Vote.create(user_id:1, article_id:1)
 Vote.create(user_id:2, article_id:1)
+
+puts "creating article 1"
+
 
 a = user1.articles.create!(title: 'The Art Of Sushi',
 text: 'Sushi is a multidisciplinary craft that produces a multisensory work of art. Visual eminence is not the only aspect of sushi which a student has to learn about before they can become a master of sushi. The taste of the sushi is just as important; the fish must be fresh, and no ingredient should be overpowering. Sushi is an act of balancing tastes so that everything works together to become a masterpiece.
@@ -47,6 +58,9 @@ Sushi was finally brought to America in 1966, when a man named Noritoshi Kanai a
 
 a.main_image.attach(io: File.open('./app/assets/seed_images/sushiboat.jpeg'),filename:'sushiboat.jpeg')
 
+puts "creating article 2"
+
+
 b = user2.articles.create!(title: 'How To Drink Sake',
 text: 'Sake is a Japanese drink that is made by fermenting rice. It is often referred to as a wine but is brewed quite differently. Also, the Alcohol by Volume (ABV) of sake is far higher than that of wine or beer. The sake rice is milled so that it mostly contains starch. To the rice mash, fungus is added and it helps to convert the starch into sugar. Thereafter, the sugar is allowed to ferment in the presence of yeast.
 
@@ -59,6 +73,8 @@ Sake is quite enjoyable with food. Some people think that it should not be serve
 Sake is most loosely described as a “rice wine” and while it is exactly that, it is also much more than that. Sake has a unique taste which cannot be compared to any other wine in the world, except perhaps some of the so-called Korean Village Wines (the home-made type). It is completely compati­ble with the extremely delicate palate of the Japanese people and blends perfectly with the flavor of their traditional dishes', category_ids:[1])
 
 b.main_image.attach(io: File.open('./app/assets/seed_images/sake.jpeg'),filename:'sake.jpeg')
+
+puts "creating article 3"
 
 
 c = user3.articles.create!(title: 'Cosmopolitan101',
@@ -73,6 +89,8 @@ Now more than ever, the world needs to be more united. The effects of covid-19 h
 In conclusion, Covid-19 looks like a “bend but won’t break crisis” for globalization. International flows are plummeting, but globalization — and opposition to globalization — will continue to present business opportunities and challenges. Careful attention to the drivers of globalization’s future can help companies navigate through and even profit from globalization’s turbulence. A volatile world of partially connected national economies expands possibilities for global strategy even as it complicates the management of multinational firms. Now is the time for global corporations to show their value by harnessing the best of the world’s capabilities to end the pandemic and bolster the recovery.', category_ids:[5])
 
 c.main_image.attach(io: File.open('./app/assets/seed_images/cosmopolitan.jpeg'),filename:'cosmopolitan.jpeg')
+
+puts "creating article 4"
 
 
 d = user4.articles.create!(title: 'Rise Of The Nomad',
@@ -90,6 +108,8 @@ But for the time being, there are still reasons why employers might favour digit
 
 d.main_image.attach(io: File.open('./app/assets/seed_images/nomad.jpeg'),filename:'nomad.jpeg')
 
+puts "creating article 5"
+
 
 e = user4.articles.create!(title: 'What is Math Rock?',
 text: "Math rock is just as eccentric as it sounds - It’s a bit like a mathematician dabbling with musical chords, strings, and notations and coming up with something genius. The results are phenomenally varied and unique. In India, where artists and bands are constantly experimenting and innovating, math rock is an exciting world worth entering. 
@@ -103,6 +123,8 @@ As you might have guessed by now, this is not your conventional music where rhyt
 Imagine this: one, two, three, four; one, two, three, four – this is a regular 4/4 time signature every mainstream artist from Lil Wayne to Aerosmith would use for their songs. But in math rock, the beats would go – one, two, three, four, five, six, seven; one, two, three, four, five, six, seven, eight – the time signature is irregular.", category_ids:[2])
 
 e.main_image.attach(io: File.open('./app/assets/seed_images/chon.jpeg'),filename:'chon.jpeg')
+
+puts "creating article 6"
 
 
 f = user5.articles.create!(title: 'Decoding The Creation Of Adam',
@@ -119,6 +141,8 @@ One of the questions that has been raised about this scene is the identity of th
 In all, the painting shows several hallmarks of Michelangelo’s painting style: the lounging position of both Adam and God, the use of bodies which are both muscular and twisting, and the painting of figures who come across as works of sculpture. It is good to remember that Michelangelo was, after all, a sculptor.  Painting was not his primary area.", category_ids:[3])
 
 f.main_image.attach(io: File.open('./app/assets/seed_images/art.jpeg'),filename:'art.jpeg')
+
+puts "creating article 7"
 
 
 g = user2.articles.create!(title: 'The Most Influential Person In History',
@@ -148,6 +172,8 @@ Indeed, about one-third of the world is considered “Christian” today. That�
 
 g.main_image.attach(io: File.open('./app/assets/seed_images/jesus.jpeg'),filename:'jesus.jpeg')
 
+puts "creating article 8"
+
 
 h = user2.articles.create!(title: 'Classical Music for Beginners',
 text: "Listening to classical music can be an enlightening, inspiring or relaxing experience, depending on your mood and what you’re listening to. But you can’t just play a song and immediately enjoy and understand it — like you can with pop music. Appreciating and taking pleasure in classical music takes time and effort, but it’s something everyone can do. Whether you’ve dabbled in a little classical music before or you’ve never heard a single note, here’s everything you need to know about how to listen to classical music.
@@ -163,6 +189,8 @@ Listening to classical music isn’t just an enjoyable hobby for people who like
 
 h.main_image.attach(io: File.open('./app/assets/seed_images/satie.jpeg'),filename:'satie.jpeg')
 
+puts "creating article 9"
+
 
 i = user5.articles.create!(title: 'Coachella: Redefining Live Music',
 text: "The Coachella Valley Music and Arts Festival is an annual music and arts festival held at the Empire Polo Club in Indio, California, in the Coachella Valley in the Colorado Desert. It was co-founded by Paul Tollett and Rick Van Santen in 1999, and is organized by Goldenvoice, a subsidiary of AEG Presents.
@@ -176,6 +204,8 @@ If you wanted to throw this party yourself, it would cost you $50M. But you can 
 Coachella has become the bread and butter of music festivals. Known for its stacked, star-studded lineups, fashion trends and hippie-style camping experience in the deserts of Indio, the festival has developed a culture of its own. ", category_ids:[2])
 
 i.main_image.attach(io: File.open('./app/assets/seed_images/coachella.jpeg'),filename:'coachella.jpeg')
+
+puts "creating article 10"
 
 
 j = user5.articles.create!(title: 'How K-Pop Shook The World',
