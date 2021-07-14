@@ -13,8 +13,7 @@ class Article < ApplicationRecord
   validates :category_ids, presence: { message: 'Select at least 1 category' }
 
   
-
-  scope :ordered_by_votes, -> { sort_by{ |article| article.order(:vote_count)} }
+  scope :ordered_by_votes, -> { sort_by{ |article| article.votes.count}.reverse }
 
   
 end
