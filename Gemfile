@@ -45,7 +45,7 @@ group :development do
   gem 'spring'
   gem 'hirb'
   gem 'devise'
-  gem 'activestorage-validator'
+  gem 'rexml', '~> 3.2', '>= 3.2.5'
 end
 
 group :test do
