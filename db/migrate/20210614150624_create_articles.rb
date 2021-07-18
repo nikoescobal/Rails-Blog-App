@@ -1,3 +1,6 @@
+# rubocop:disable all
+# frozen_string_literal: true
+
 class CreateArticles < ActiveRecord::Migration[6.1]
   def change
     create_table :articles do |t|
@@ -7,3 +10,5 @@ class CreateArticles < ActiveRecord::Migration[6.1]
     end
   end
 end
+
+# rubocop:enable all

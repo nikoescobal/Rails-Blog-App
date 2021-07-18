@@ -1,5 +1,8 @@
+# rubocop:disable Style/Documentation
+# frozen_string_literal: true
+
 class CategoriesController < ApplicationController
-  before_action :set_category, only: %i[ show edit update destroy ]
+  before_action :set_category, only: %i[show edit update destroy]
 
   # GET /categories or /categories.json
   def index
@@ -8,7 +11,6 @@ class CategoriesController < ApplicationController
     #   @c_params = (params[:id])
     #   if Category.where(user_id: current_user.id, article_id: params[:id]).count > 0
     # end
-
   end
 
   # GET /categories/1 or /categories/1.json
@@ -32,7 +34,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
-        format.html { redirect_to @category, notice: "Category successfully created." }
+        format.html { redirect_to @category, notice: 'Category successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -45,7 +47,7 @@ class CategoriesController < ApplicationController
   def update
     respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to @category, notice: "Category successfully updated." }
+        format.html { redirect_to @category, notice: 'Category successfully updated.' }
         format.json { render :show, status: :ok, location: @category }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -58,19 +60,22 @@ class CategoriesController < ApplicationController
   def destroy
     @category.destroy
     respond_to do |format|
-      format.html { redirect_to categories_url, alert: "Category successfully destroyed." }
+      format.html { redirect_to categories_url, alert: 'Category successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_category
-      @category = Category.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def category_params
-      params.fetch(:category, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_category
+    @category = Category.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def category_params
+    params.fetch(:category, {})
+  end
 end
+
+# rubocop:enable Style/Documentation

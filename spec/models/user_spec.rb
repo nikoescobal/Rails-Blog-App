@@ -1,7 +1,11 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.create(email: 'leeevi@gmail.com', password: '123456', password_confirmation: '123456', username:"leeevi") }
+  let(:user) do
+    User.create(email: 'leeevi@gmail.com', password: '123456', password_confirmation: '123456', username: 'leeevi')
+  end
   let(:articles) { User.reflect_on_association(:articles).macro }
   let(:categories) { Article.reflect_on_association(:categories).macro }
 
