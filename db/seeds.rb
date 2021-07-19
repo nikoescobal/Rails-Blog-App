@@ -31,6 +31,7 @@ ArticleCategory.create(article_id: 7, category_id: 4)
 ArticleCategory.create(article_id: 8, category_id: 2)
 ArticleCategory.create(article_id: 9, category_id: 2)
 ArticleCategory.create(article_id: 10, category_id: 2)
+ArticleCategory.create(article_id: 11, category_id: 6)
 
 puts 'creating votes'
 
@@ -200,9 +201,8 @@ So, how did K-pop conquer the world? Clever design and brilliant marketing. But 
 
 j.main_image.attach(io: File.open('./app/assets/seed_images/blackpink.jpeg'), filename: 'blackpink.jpeg')
 
-# rubocop:enable all
 
-e = user4.articles.create!(title: 'The Future is Remote', text: "While Covid-19 has left governments reeling, people dying, and millions affected negatively, it is also fair to say that not all the effects have been bad -- in fact, it's precisely because of this pandemic that a massive shift to remote work started to happen. With people prioritizing their health and safety, the appeal to become a digital nomad is very real. In fact, the pandemic accelerated the trend towards digital nomadism, despite travel restrictions.
+k = user1.articles.create!(title: 'The Future is Remote', text: "While Covid-19 has left governments reeling, people dying, and millions affected negatively, it is also fair to say that not all the effects have been bad -- in fact, it's precisely because of this pandemic that a massive shift to remote work started to happen. With people prioritizing their health and safety, the appeal to become a digital nomad is very real. In fact, the pandemic accelerated the trend towards digital nomadism, despite travel restrictions.
 
 The Covid-19 pandemic has rewritten the rules governing work, with employees choosing to ditch the office permanently in favour of remote work. While many are leaving cities to settle in more affordable and spacious locations, a small but growing number are taking the opportunity to become ‘digital nomads’, remote workers who travel the world. For employers, this tech-savvy community is a potential source of affordable digital skills – and governments are beginning to make it easier for digital nomads to work in their countries.
   
@@ -214,5 +214,6 @@ Digital nomadism is likely to be one dimension of a broader global redistributio
   
 But for the time being, there are still reasons why employers might favour digital nomads over conventional offshoring, Frey adds. “A more significant barrier to offshoring than digital infrastructure is language,” he says. “Machine translation is improving rapidly but language and culture matter enormously for trade in services.”", category_ids: [6])
   
-e.main_image.attach(io: File.open('./app/assets/seed_images/digitalnomad.jpeg'), filename: 'digitalnomad.jpeg')
+k.main_image.attach(io: File.open('./app/assets/seed_images/digitalnomad.jpeg'), filename: 'digitalnomad.jpeg')
   
+# rubocop:enable all
