@@ -32,6 +32,7 @@ ArticleCategory.create(article_id: 8, category_id: 2)
 ArticleCategory.create(article_id: 9, category_id: 2)
 ArticleCategory.create(article_id: 10, category_id: 2)
 ArticleCategory.create(article_id: 11, category_id: 6)
+ArticleCategory.create(article_id: 12, category_id: 7)
 
 puts 'creating votes'
 
@@ -201,6 +202,7 @@ So, how did K-pop conquer the world? Clever design and brilliant marketing. But 
 
 j.main_image.attach(io: File.open('./app/assets/seed_images/blackpink.jpeg'), filename: 'blackpink.jpeg')
 
+puts 'creating article 11'
 
 k = user1.articles.create!(title: 'The Future is Remote', text: "While Covid-19 has left governments reeling, people dying, and millions affected negatively, it is also fair to say that not all the effects have been bad -- in fact, it's precisely because of this pandemic that a massive shift to remote work started to happen. With people prioritizing their health and safety, the appeal to become a digital nomad is very real. In fact, the pandemic accelerated the trend towards digital nomadism, despite travel restrictions.
 
@@ -215,5 +217,18 @@ Digital nomadism is likely to be one dimension of a broader global redistributio
 But for the time being, there are still reasons why employers might favour digital nomads over conventional offshoring, Frey adds. “A more significant barrier to offshoring than digital infrastructure is language,” he says. “Machine translation is improving rapidly but language and culture matter enormously for trade in services.”", category_ids: [6])
   
 k.main_image.attach(io: File.open('./app/assets/seed_images/digitalnomad.jpeg'), filename: 'digitalnomad.jpeg')
+
+puts 'creating article 12'
+
+l = user2.articles.create!(title: 'Sushi is Life', text: "I love sushi. I have been eating it for years and found myself interested in making my own at home. Just throw some rice, fish, and veggies onto some seaweed and roll it. How hard could it be, right?! Wrong! It is not nearly as easy as the sushi chefs make it look. Those guys have been doing it for so long that it’s second nature to them. Me, on the other hand, with no sushi experience what-so-ever, other than eating it, decided last year to learn how to make it. So a few days before Valentine’s day. I planned to surprise my fiancé..
+
+When in doubt, resort to the internet for help. I found a plethora of YouTube videos explaining everything from tools , to the ingredients, to all of the right techniques. I watched and took notes for a solid two hours. Since I only had three days to learn the art of sushi making, my new adventure began immediately. Long story short, the sushi turned out amazing! I’m not going to lie, I blew myself away. Just call me, Master Sushi Chef, yet the most amazing part was not the sushi, but the lessons that sushi has been teaching me ever since.
+  
+  
+Always be prepared. Maki is the most common type of roll we might see at a Japanese restaurant. If I hadn’t spent all that time researching, I would have ended up with a raw fish rice bowl instead of Maki sushi. Like anything else, there are many unforeseen things that can go wrong when you’re doing something for the first time. The more we prepare ourselves, the more equipped we become are to handle any issues that can arise. In my research I found that the rice is the most important part of making sushi rolls. Get the wrong rice and it will never be right. Pheww! Dodged a bullet there! I was about to use some of the Uncle Ben’s sitting it my pantry. I’m so glad I took the time to understand all of the ingredients, and their role in the dish. After that, I watched videos on the fundamentals and techniques of preparing the rolls. I felt ready. Well, at least, I thought I was ready.
+  
+Shit happens. Roll with it. (No pun intended.) I’m not gonna lie, my first try was a bit of a disaster. Thank goodness I had an extra day to experiment before making Valentine’s Day dinner for the future Mrs. If I hadn’t, I might not be married today. There definitely were more tasks to do than I expected. Right out of the gate I tried doing everything at once. I was all over the place, and so were the ingredients. I was so frustrated. I could have given up and picked an easier recipe to make, but I was determined to make this work. Luckily for me, there was a hidden lesson in this mess. The best chefs in the world will say that prep time is the most important part of cooking. Now, I get it! The next day I spent a couple hours, before cooking the rice, just cutting vegetables, and organizing my cooking area. Everything was prepped and organized in front of me so that when the rice was ready, all I had to do was place the ingredients on the toasted sea weed sheet, roll, and slice. Every decision I now make, every meeting I attend, or every place a go, I spend at least a little time preparing for what is to come.", category_ids: [7])
+    
+l.main_image.attach(io: File.open('./app/assets/seed_images/aestheticsushi.jpeg'), filename: 'aestheticsushi.jpeg')
   
 # rubocop:enable all
