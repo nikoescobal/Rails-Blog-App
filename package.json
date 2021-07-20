@@ -11,6 +11,7 @@
     "postcss": "^7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "turbolinks": "^5.2.0",
+    "typeface-inter": "^3.18.1",
     "webpack": "^4.46.0",
     "webpack-cli": "^3.3.12"
   },

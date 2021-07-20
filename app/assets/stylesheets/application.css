@@ -14,6 +14,10 @@
  *= require_self
  */
 
+body {
+  font-family: Inter;
+}
+
 #article_image {
   display: flex;
   flex-direction: column;

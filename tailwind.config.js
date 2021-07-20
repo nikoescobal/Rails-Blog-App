@@ -2,10 +2,9 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: [
-    enabled: false
-    // './app/**/.html.erb',
-    // './app/helpers/**/*.rb',
-    // './app/javascript/**/*.js'
+    './app/**/.html.erb',
+    './app/helpers/**/*.rb',
+    './app/javascript/**/*.js'
   ],
   presets: [],
   darkMode: false, // or 'media' or 'class'
@@ -244,6 +243,7 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
+      body: ['inter'],
       sans: [
         'ui-sans-serif',
         'system-ui',

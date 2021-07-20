@@ -1,3 +1,6 @@
+require('tailwindcss')
+require('authoprefixer')
+
 module.exports = {
   plugins: [
     require('tailwindcss')('./app/javascript/stylesheets/tailwind.config.js'),
