@@ -6,7 +6,7 @@
 
 #### In this project, I designed my own online lifestyle publication with this [design](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version) as a reference. 
 
-#### This sleek and modern website was built with a mobile-first approach, while applying fluid design principles. It is fully-responsive across all screen sizes - mobile, tablet, and desktop. 
+#### This sleek and modern website was built with a mobile-first approach, while applying fluid design principles. It is fully-responsive across all screen sizes - mobile, tablet, and desktop. Here, users can sign up, log in, write articles with multiple categories, and like other articles.
 
 
 #### The purpose of this project was to demonstrate mastery of Ruby and RoR fundamentals. It has the following features:
