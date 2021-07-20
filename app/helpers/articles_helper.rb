@@ -12,7 +12,7 @@ module ArticlesHelper
                   class: 'min-h-full bg-cover object-cover min-h-64 max-h-full bg-no-repeat bg-center md:w-full lg:w-full hover:scale-110'
       end
     else
-      image_tag 'placeholder', class: 'h-full bg-cover object-cover w-full'
+      image_tag 'placeholder.jpeg', class: 'h-full bg-cover object-cover w-full'
     end
   end
 

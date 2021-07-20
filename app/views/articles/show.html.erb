@@ -12,9 +12,9 @@
           <%= @article.votes.count %>
           <div class="flex text-white items-center px-3">
             <% if @vote %>
-              <%= link_to image_tag("logo-1", width: "3%"), article_vote_path(@article, @vote), method: :delete %>
+              <%= link_to image_tag("logo-1.svg", width: "3%"), article_vote_path(@article, @vote), method: :delete %>
             <% else %>
-              <%= link_to image_tag("logo-2", width: "3%"), article_votes_path(@article), method: :post %>
+              <%= link_to image_tag("logo-2.svg", width: "3%"), article_votes_path(@article), method: :post %>
             <% end %>
           </div>
           <div class="flex space-x-4">

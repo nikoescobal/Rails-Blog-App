@@ -11,7 +11,7 @@ module CategoriesHelper
       image_tag fetch_articles.main_image,
                 class: 'object-cover order-first sm:order-first md:order-first lg:order-none w-full h-64 max-h-full lg:h-full'
     else
-      image_tag 'placeholder'
+      image_tag 'placeholder.jpeg'
     end
   end
 end
