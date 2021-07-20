@@ -50,7 +50,7 @@ The more modern concept of sushi didn’t arrive until around the 1820s, when a 
 
 Sushi was finally brought to America in 1966, when a man named Noritoshi Kanai and his Jewish business partner, Harry Wolff, opened Kawafuku Restaurant in Little Tokyo, Los Angeles. Their restaurant was the first to offer traditional nigiri sushi to Americans. It was incredibly successful with Japanese businessmen, who then introduced it to their American colleagues and friends.', category_ids: [7])
 
-# a.main_image.attach(io: File.open('./app/assets/seed_images/sushiboat.jpeg'), filename: 'sushiboat.jpeg')
+a.main_image.attach(io: File.open('./app/assets/seed_images/sushiboat.jpeg'), filename: 'sushiboat.jpeg')
 
 puts 'creating article 2'
 
@@ -64,7 +64,7 @@ Sake is quite enjoyable with food. Some people think that it should not be serve
 
 Sake is most loosely described as a “rice wine” and while it is exactly that, it is also much more than that. Sake has a unique taste which cannot be compared to any other wine in the world, except perhaps some of the so-called Korean Village Wines (the home-made type). It is completely compati­ble with the extremely delicate palate of the Japanese people and blends perfectly with the flavor of their traditional dishes', category_ids: [1])
 
-# b.main_image.attach(io: File.open('./app/assets/seed_images/sake.jpeg'), filename: 'sake.jpeg')
+b.main_image.attach(io: File.open('./app/assets/seed_images/sake.jpeg'), filename: 'sake.jpeg')
 
 puts 'creating article 3'
 
@@ -78,7 +78,7 @@ Now more than ever, the world needs to be more united. The effects of covid-19 h
 
 In conclusion, Covid-19 looks like a “bend but won’t break crisis” for globalization. International flows are plummeting, but globalization — and opposition to globalization — will continue to present business opportunities and challenges. Careful attention to the drivers of globalization’s future can help companies navigate through and even profit from globalization’s turbulence. A volatile world of partially connected national economies expands possibilities for global strategy even as it complicates the management of multinational firms. Now is the time for global corporations to show their value by harnessing the best of the world’s capabilities to end the pandemic and bolster the recovery.', category_ids: [5])
 
-# c.main_image.attach(io: File.open('./app/assets/seed_images/cosmopolitan.jpeg'), filename: 'cosmopolitan.jpeg')
+c.main_image.attach(io: File.open('./app/assets/seed_images/cosmopolitan.jpeg'), filename: 'cosmopolitan.jpeg')
 
 puts 'creating article 4'
 
@@ -94,7 +94,7 @@ Digital nomadism is likely to be one dimension of a broader global redistributio
 
 But for the time being, there are still reasons why employers might favour digital nomads over conventional offshoring, Frey adds. “A more significant barrier to offshoring than digital infrastructure is language,” he says. “Machine translation is improving rapidly but language and culture matter enormously for trade in services.”", category_ids: [6])
 
-# d.main_image.attach(io: File.open('./app/assets/seed_images/nomad.jpeg'), filename: 'nomad.jpeg')
+d.main_image.attach(io: File.open('./app/assets/seed_images/nomad.jpeg'), filename: 'nomad.jpeg')
 
 puts 'creating article 5'
 
@@ -108,7 +108,7 @@ As you might have guessed by now, this is not your conventional music where rhyt
 
 Imagine this: one, two, three, four; one, two, three, four – this is a regular 4/4 time signature every mainstream artist from Lil Wayne to Aerosmith would use for their songs. But in math rock, the beats would go – one, two, three, four, five, six, seven; one, two, three, four, five, six, seven, eight – the time signature is irregular.", category_ids: [2])
 
-# e.main_image.attach(io: File.open('./app/assets/seed_images/chon.jpeg'), filename: 'chon.jpeg')
+e.main_image.attach(io: File.open('./app/assets/seed_images/chon.jpeg'), filename: 'chon.jpeg')
 
 puts 'creating article 6'
 
@@ -124,7 +124,7 @@ One of the questions that has been raised about this scene is the identity of th
 
 In all, the painting shows several hallmarks of Michelangelo’s painting style: the lounging position of both Adam and God, the use of bodies which are both muscular and twisting, and the painting of figures who come across as works of sculpture. It is good to remember that Michelangelo was, after all, a sculptor.  Painting was not his primary area.", category_ids: [3])
 
-# f.main_image.attach(io: File.open('./app/assets/seed_images/art.jpeg'), filename: 'art.jpeg')
+f.main_image.attach(io: File.open('./app/assets/seed_images/art.jpeg'), filename: 'art.jpeg')
 
 puts 'creating article 7'
 
@@ -152,7 +152,7 @@ For some reason, Jesus became more and more of a perceived threat to the “orga
 
 Indeed, about one-third of the world is considered “Christian” today. That’s a pretty staggering number – that’s a pretty influential life after nearly 2,000 years. Yes, some religious institutions have confused and cluttered the original message of Jesus over the centuries, but his simple life and powerful words still speak for themselves.", category_ids: [4])
 
-# g.main_image.attach(io: File.open('./app/assets/seed_images/jesus.jpeg'), filename: 'jesus.jpeg')
+g.main_image.attach(io: File.open('./app/assets/seed_images/jesus.jpeg'), filename: 'jesus.jpeg')
 
 puts 'creating article 8'
 
@@ -167,7 +167,7 @@ Classical music lives on today, with composers writing scores for film productio
 
 Listening to classical music isn’t just an enjoyable hobby for people who like the genre. Scientific studies have proven there’s a host of benefits you can gain if you embrace the classical composers. ", category_ids: [2])
 
-# h.main_image.attach(io: File.open('./app/assets/seed_images/satie.jpeg'), filename: 'satie.jpeg')
+h.main_image.attach(io: File.open('./app/assets/seed_images/satie.jpeg'), filename: 'satie.jpeg')
 
 puts 'creating article 9'
 
@@ -181,7 +181,7 @@ If you wanted to throw this party yourself, it would cost you $50M. But you can 
 
 Coachella has become the bread and butter of music festivals. Known for its stacked, star-studded lineups, fashion trends and hippie-style camping experience in the deserts of Indio, the festival has developed a culture of its own. ", category_ids: [2])
 
-# i.main_image.attach(io: File.open('./app/assets/seed_images/coachella.jpeg'), filename: 'coachella.jpeg')
+i.main_image.attach(io: File.open('./app/assets/seed_images/coachella.jpeg'), filename: 'coachella.jpeg')
 
 puts 'creating article 10'
 
@@ -199,7 +199,7 @@ It showed that you could be big and not sing entirely in English or be in vogue.
 
 So, how did K-pop conquer the world? Clever design and brilliant marketing. But there's more to a K-pop band. It's an expression of Korean culture, and the government has been more than happy to capitalise on its success.", category_ids: [2])
 
-# j.main_image.attach(io: File.open('./app/assets/seed_images/blackpink.jpeg'), filename: 'blackpink.jpeg')
+j.main_image.attach(io: File.open('./app/assets/seed_images/blackpink.jpeg'), filename: 'blackpink.jpeg')
 
 
 k = user1.articles.create!(title: 'The Future is Remote', text: "While Covid-19 has left governments reeling, people dying, and millions affected negatively, it is also fair to say that not all the effects have been bad -- in fact, it's precisely because of this pandemic that a massive shift to remote work started to happen. With people prioritizing their health and safety, the appeal to become a digital nomad is very real. In fact, the pandemic accelerated the trend towards digital nomadism, despite travel restrictions.
@@ -214,6 +214,6 @@ Digital nomadism is likely to be one dimension of a broader global redistributio
   
 But for the time being, there are still reasons why employers might favour digital nomads over conventional offshoring, Frey adds. “A more significant barrier to offshoring than digital infrastructure is language,” he says. “Machine translation is improving rapidly but language and culture matter enormously for trade in services.”", category_ids: [6])
   
-# k.main_image.attach(io: File.open('./app/assets/seed_images/digitalnomad.jpeg'), filename: 'digitalnomad.jpeg')
+k.main_image.attach(io: File.open('./app/assets/seed_images/digitalnomad.jpeg'), filename: 'digitalnomad.jpeg')
   
 # rubocop:enable all
