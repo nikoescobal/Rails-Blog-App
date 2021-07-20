@@ -12,7 +12,7 @@ class Article < ApplicationRecord
   #                        blob: { content_type: ['image/jpg', 'image/jpeg', 'image/png'], size_range: 1..3.megabytes }
 
   validates :title, presence: true
-  validates :text, length: { minimum: 15 } 
+  validates :text, length: { minimum: 15 }
   validates :category_ids, presence: { message: 'Select at least 1 category' }
 
   scope :ordered_by_votes, -> { sort_by { |article| article.votes.count }.reverse }

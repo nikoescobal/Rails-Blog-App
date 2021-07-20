@@ -15,7 +15,7 @@ RSpec.describe User, type: :model do
 
   it 'checks correct association with articles' do
     expect(articles).to eq(:has_many)
-  end 
+  end
 
   it 'checks correct association with categories' do
     expect(categories).to eq(:has_many)
