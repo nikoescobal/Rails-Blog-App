@@ -4,6 +4,7 @@
 // that code so it'll be compiled.
 
 require('jquery')
+require("css/application.scss")
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
