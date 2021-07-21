@@ -74,4 +74,3 @@ class CategoriesController < ApplicationController
     params.fetch(:category, {})
   end
 end
-
