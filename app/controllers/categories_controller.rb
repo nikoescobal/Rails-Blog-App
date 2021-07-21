@@ -1,6 +1,3 @@
-# rubocop:disable Style/Documentation
-# frozen_string_literal: true
-
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy]
 
@@ -78,4 +75,3 @@ class CategoriesController < ApplicationController
   end
 end
 
-# rubocop:enable Style/Documentation

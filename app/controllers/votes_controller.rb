@@ -1,7 +1,3 @@
-# rubocop:disable Style/Documentation
-
-# frozen_string_literal: true
-
 class VotesController < ApplicationController
   before_action :authenticate_user!
   def create
@@ -36,5 +32,3 @@ class VotesController < ApplicationController
     params.fetch(:vote, {})
   end
 end
-
-# rubocop:enable Style/Documentation

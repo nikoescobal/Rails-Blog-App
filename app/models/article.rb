@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Article < ApplicationRecord
   belongs_to :user
   has_many :comments, dependent: :destroy
@@ -8,8 +6,8 @@ class Article < ApplicationRecord
   has_many :votes, dependent: :destroy
 
   has_one_attached :main_image
-  # validates :main_image, presence: true,
-  #                        blob: { content_type: ['image/jpg', 'image/jpeg', 'image/png'], size_range: 1..3.megabytes }
+  validates :main_image, presence: true,
+                         blob: { content_type: ['image/jpg', 'image/jpeg', 'image/png'], size_range: 1..3.megabytes }
 
   validates :title, presence: true
   validates :text, length: { minimum: 15 }
