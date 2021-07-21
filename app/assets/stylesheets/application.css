@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+#article_image {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  cursor: pointer;
+}
+
+label {
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
+  padding: 10px 16px;
+  border-radius: 50px;
+}
+
+input[type="file"] {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.alert {
+  cursor: pointer;
+}
+
+.notice {
+  cursor: pointer;
+}

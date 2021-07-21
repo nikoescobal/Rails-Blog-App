@@ -1,0 +1,24 @@
+<%= form_with(model: article, local: true) do |f| %>
+  <div class="flex items-center space-y-3 py-3 flex-col h-full">
+    <%= render 'shared/errors', object: article %>
+    <%= f.label :title, class:"text-lg font-bold" %>
+    <%= f.text_field :title, autofocus: true, class:"focus:outline-white w-96 text-lg" %>
+    <%= f.label :text, class:"text-lg font-bold" %>
+    <div class="pb-3">
+      <%= f.text_area :text, rows: 7, autofocus: true, class:"focus:outline-white text-lg w-96 h-36 text" %>
+    </div>
+    <div class="px-4 py-3 my-3 bg-gray-100 rounded-full">
+      <%= f.label :main_image, class: "px-4 py-3" %>
+    </div>
+    <%= f.file_field :main_image, class:"px-3" %>
+    <div class="px-4 py-3 my-3 bg-gray-100 rounded-full button cursor-pointer">
+      <%= f.submit %>
+    </div>
+    <div class="bg-teal-400 rounded p-3">
+      <h3 class="text-lg text-white bg-opacity-50">Select which applies:</h3>
+    </div>
+    <div class="checkboxes space-x-3 py-3 flex text-center items-center">
+      <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) %>
+    </div>
+  <% end %>
+</div>

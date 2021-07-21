@@ -1,0 +1,71 @@
+<header class="w-full z-50 flex mb-20">
+  <!-- navbar goes here -->
+  <nav class="bg-bluegray-100 px-8 pt-6 pb-7 mx-auto w-full z-50 flex flex-col fixed top-0">
+    <div>
+      <div class="flex justify-between">
+        <!-- logo -->
+        <div class="flex items-center">
+          <%= link_to "GetCultured", root_path, class:"items-center text-2xl lg:text-3xl tracking-tighter font-mono font-bold transition duration-300 bg-clip-text text-transparent bg-gradient-to-l from-teal-400 to-blue-600 hover:text-blue-800" %>
+          <%= link_to image_tag("idea.svg"), root_path, class:"w-9 flex items-center -mt-3" %>
+        </div>
+        <!-- primary nav -->
+        <div class="hidden md:flex flex items-center xl:pr-20  uppercase md:text-xs lg:text-sm md:space-x-2  lg:space-x-4 font-mono">
+          <%= link_to "Home", articles_path, class: "group font-bold font-mono md:text-sm lg:text-base bg-clip-text text-transparent bg-gradient-to-l from-blue-400 to-teal-500 hover:text-blue-800 hover:underline bg-gray-700 hover:bg-gray-100 py-2 md:px-1  lg:px-3 rounded shadow uppercase transition duration-300" %>
+          <% @categories.each do |category| %>
+            <div class="hover:text-blue-500 font-bold md:text-sm lg:text-base text-blue-700 hover:underline">
+              <%= link_to category.name, category, class: "flex space-x-4" %>
+            </div>
+          <% end %>
+        </div>
+        <!-- mobile menu -->
+        <div class="md:hidden flex items-center">
+          <button class="mobile-menu-button h-8 w-10 flex items-center transition delay-150 duration-300 ease-in-out animate-pulse focus:outline-none">
+            <%= image_tag("menu.svg") %>
+          </button>
+        </div>
+        <!-- secondary nav -->
+        <div class="hidden md:flex flex items-center md:space-x-1  lg:space-x-3 md:text-xs lg:text-sm uppercase font-mono group">
+          <div class="flex lg:space-x-2 md:space-x-1 items-center md:text-xs lg:text-sm group">
+            <% if user_signed_in? %>
+              <div class="group py-2 px-3 bg-teal-400 hover:bg-yellow-300 text-teal-900 group-hover:text-teal-800 rounded shadow transition duration-300 md:text-xs lg:text-sm">
+                <%= link_to "Write an article", new_article_path, class: "text-base text-white font-bold btn btn-default group-hover:text-blue-600" %>
+              </div>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-default font-bold text-base text-blue-700 hover:text-blue-500" %>
+            </div>
+          <% else %>
+            <div class="flex space-x-2 md:space-x-1 items-center md:text-xs lg:text-sm group">
+              <div class="group py-2 px-3 bg-teal-400 hover:bg-yellow-300 text-teal-900 group-hover:text-teal-800 rounded shadow transition duration-300 md:text-xs lg:text-sm">
+                <%= link_to "Login", new_user_session_path, class:"font-bold md:text-teal-500 lg:text-white group btn btn-default group-hover:text-blue-600" %>
+              </div>
+              <%= link_to "Register", new_user_registration_path, class:"btn btn-default font-bold text-blue-700 hover:text-blue-500" %>
+            <% end %>
+          </div>
+          <!-- mobile menu -->
+          <div class="hidden md:hidden flex items-center">
+            <button class="mobile-menu-button h-8 w-10 flex items-center transition delay-150 duration-300 ease-in-out animate-pulse focus:outline-none">
+              <%= image_tag("menu.svg") %>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="mobile-menu hidden md:hidden transition duration-500 ease-in-out ">
+      <div class="block uppercase text-xs font-mono">
+        <%= link_to "Home", articles_path, class: "font-bold block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
+        <% @categories.each do |category| %>
+          <div class="block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter font-mono text-teal-500 pl-8 py-1">
+            <%= link_to category.name, articles_path(@articles), class: "flex space-x-4" %>
+          </div>
+        <% end %>
+        <% if user_signed_in? %>
+          <%= link_to "Write an article", new_article_path, class: "md:text-teal-500 hover:text-blue-600 font-bold lg:text-white btn btn-default group-hover:text-blue-600 block hover:bg-gray-300 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-default text-blue-700 font-bold hover:text-blue-500 block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
+        <% else %>
+          <%= link_to "Login", new_user_session_path, class:"font-bold text-teal-500 lg:text-white lg:hidden group btn btn-default group-hover:text-blue-600 block hover:bg-gray-300 hover:text-blue-600 items-center tracking-tighter pl-8 font-mono py-1" %>
+          <%= link_to "Register", new_user_registration_path, class:"lg:hidden btn btn-default hover:text-blue-600 block hover:bg-gray-300 hover:text-teal-700 items-center tracking-tighter pl-8 font-mono text-teal-500 py-1" %>
+        <% end %>
+      </div>
+    </div>
+  </nav>
+</header>

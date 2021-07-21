@@ -1,0 +1,38 @@
+<div class="font-mono flex-wrap w-full">
+  <div class="grid w-full h-full place-items-start sm:grid-rows-2 sm:grid-cols-1 lg:grid-cols-2 grid-cols-1">
+    <% fetch_articles.each_with_index do |article, index| %>
+      <% if index % 4 < 2 %>
+        <div class="grid sm:grid-cols-1 lg:grid-cols-2 grid-cols-1 w-full h-full">
+          <%= category_image(article) %>
+          <div class="flex-col space-y-4 mx-auto flex w-full bg-gray-100 text-teal-700">
+            <div class="bg-teal-400 p-3 bg-opacity-70">
+              <h2 class="items-center flex justify-center underline text-lg text-white" ><%= @category.name %></h2>
+            </div>
+            <h2 class="items-center flex justify-center font-bold md:text-sm text-md px-10 text-blue-600" ><%= article.title %></h2>
+            <h2 class="items-center text-xs flex justify-center px-10" ><%= truncate(article.text, length: 150, separator: ' ') %></h2>
+            <div class="flex justify-center py-3">
+              <p><%= link_to 'Read More', article, class:"bg-yellow-300 hover:bg-yellow-400 p-2 rounded-full text-blue-600 hover:text-blue-800 text-xs italic btn btn-default hover:text-blue-900 shadow transition duration-500" %></p>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="grid sm:grid-cols-1 lg:grid-cols-2 grid-cols-1 w-full h-full">
+          <div class="flex-col space-y-4 mx-auto flex w-full bg-gray-100 text-teal-700">
+            <div class="bg-teal-400 p-3 bg-opacity-70">
+              <h2 class="items-center flex justify-center underline text-lg text-white" ><%= @category.name %></h2>
+            </div>
+            <h2 class="items-center flex justify-center font-bold md:text-sm text-md px-10 text-blue-600" ><%= article.title %></h2>
+            <h2 class="items-center text-xs flex justify-center px-10" ><%= truncate(article.text, length: 150, separator: ' ') %></h2>
+            <div class="flex justify-center py-3">
+              <p><%= link_to 'Read More', article, class:"bg-yellow-300 hover:bg-yellow-400 p-2 rounded-full text-blue-600 hover:text-blue-800 text-xs italic btn btn-default hover:text-blue-900 shadow transition duration-500" %></p>
+            </div>
+          </div>
+          <%= category_image(article) %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="space-x-6 py-6 flex items-center text-center w-full justify-center">
+    <%= link_to 'Back', articles_path, class:" hover:underline text-white rounded-full hover:text-blue-900 bg-blue-400 py-2 px-4" %>
+  </div>
+</div>

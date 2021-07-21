@@ -1,0 +1,25 @@
+<div class="h-full border-bluegray-100 bg-bluegray-100 bg-opacity-50 font-mono text-white">
+  <div class="bg-opacity-10 w-full object-cover absolute article-show" >
+    <%= main_image(@article, false) %>
+  </div>
+  <div class="md:py-2 space-y-4 lg:py-3 items-center flex flex-col bg-teal-500 group">
+    <h1 class="bg-teal-500 p-6 rounded bg-opacity-50 text-3xl lg:text-6xl md:text-4xl items-center relative flex text-center"><%= @article.title %></h1>
+    <h3 class="bg-gradient-to-b from-transparent to-blue-700 bg-opacity-30 hover:bg-opacity-70 group text-md flex relative justify-center items-center text-center pt-16 px-16 lg:px-64 md:pt-20 md:px-20 lg:px-30 lg:pt-30 w-full text-white whitespace-pre-line min-h-96"><%= @article.text %></h3>
+    <h3 class="bg-teal-500 bg-opacity-50 group text-md flex relative justify-center items-center text-center w-full uppercase text-white">Written by:<%= truncate(@article.user.username, length: 15, separator: ' ') %></h3>
+    <div class="text-white group relative flex justify-center w-full py-2 px-3 rounded bg-blue-700 bg-opacity-30">
+      <div class="details py-10 relative flex space-x-3 bg-transparent justify-between">
+        <section class="admin flex flex-column">
+          <%= @article.votes.count %>
+          <div class="flex text-white items-center px-3">
+            <% if @vote %>
+              <%= link_to image_tag("logo-1.svg", width: "3%"), article_vote_path(@article, @vote), method: :delete %>
+            <% else %>
+              <%= link_to image_tag("logo-2.svg", width: "3%"), article_votes_path(@article), method: :post %>
+            <% end %>
+          </div>
+          <div class="flex space-x-4">
+            <%= link_to 'Back', articles_path, class:"text-white hover:underline hover:text-blue-500 bg:blue-300" %>
+          </div>
+        </section>
+      </div>
+    </div>

@@ -1,0 +1,28 @@
+<div class="font-mono">
+  <div class="h-96 border-bluegray-100 relative font-mono">
+    <%= main_image(most_voted_article, true) %>
+    <div class="md:p-2 space-y-4 lg:p-3 rounded absolute bottom-0 left-0 flex flex-col justify-center w-1/4 group bg-teal-100 bg-opacity-30 group hover:bg-opacity-0">
+      <h2 class="flex justify-center font-bold text-lg p-2 text-white rounded bg-teal-400 group-hover:bg-teal-500 shadow group-hover:bg-opacity-80 "><%= @articles.first.title %></h2>
+      <div class="flex py-2 space-y-2 justify-between text-white lg:flex lg:flex-row flex-wrap md:flex-col">
+        <h3 class="bg-blue-400 space-y-2 group-hover:bg-blue-600 group-hover:bg-opacity-80 p-2 rounded text-xs"><%= truncate(@articles.first.text, length: 45, separator: ' ') %></h3>
+        <p><%= link_to 'Read More', article_path(@articles.first), class:"space-y-2 group bg-yellow-300 group-hover:bg-yellow-400 p-2 rounded-full text-blue-600 group-hover:text-blue-800 text-xs italic btn btn-default group-hover:text-blue-900 shadow transition duration-300" %></p>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-row bg-gray-300 flex-wrap">
+    <% highest_ranked_categories.each_with_index do |category, index| %>
+      <div class="w-1/4 h-64 nax-h-full relative group">
+        <%= main_image(category.articles.last, false) %>
+        <div class="p-2 rounded h-full absolute bottom-0 bg-teal-100 bg-opacity-30 group hover:bg-opacity-0 w-full md:space-y-1 lg:space-y-2 flex flex-col justify-between shadow transition duration-500">
+          <div class="bg-blue-400 group-hover:bg-teal-500 shadow group-hover:bg-opacity-80 w-1/3 items-center p-2 flex justify-center rounded shadow transition duration-500">
+            <h2 class="font-bold lg:text-lg md:text-sm text-white underline-yellow"h2><%=category.name %></h2>
+          </div>
+          <div class="py-1 justify-items-center justify-center lg:flex lg:flex-row md:flex-col w-full text-white items-center lg:text-center justify-between group">
+            <h3 class="space-y-2 my-2 bg-blue-400 group-hover:bg-blue-600 group-hover:bg-opacity-80 p-2 rounded text-xs"><%= truncate(category.articles.last.title, length: 35, separator: ' ') %></h3>
+            <p><%= link_to 'Read More', category.articles.last, class:"space-y-2 bg-yellow-300 group-hover:bg-yellow-400 p-2 rounded-full text-blue-600 group-hover:text-blue-800 text-xs italic btn btn-default group-hover:text-blue-900 shadow transition duration-500" %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

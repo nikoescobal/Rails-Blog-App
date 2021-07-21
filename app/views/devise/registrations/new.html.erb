@@ -1,0 +1,27 @@
+<div class="font-mono bg-blue-100 h-screen justify-center font-mono flex">
+  <div class="space-y-3 py-4 flex justify-center text-center items-center flex-col">
+    <h2 class="text-white bg-teal-400 bg-opacity-70 rounded flex items-center px-14 text-2xl font-bold justify-center space-y-6 py-6">Sign up</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="field py-3">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+      <div class="field py-3">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+      <div class="field py-3">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+      <div class="actions py-3 hover:text-teal-500">
+        <%= f.submit "Sign up" %>
+      </div>
+    <% end %>
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
