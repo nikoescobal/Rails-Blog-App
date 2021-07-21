@@ -98,13 +98,13 @@ Feel free to check the [issues page](issues/).
 
 ## Show your support
 
-Give a ⭐️ if you dig this project!
+Give a ⭐️ if you dig this project! 
 
 ## Acknowledgments
 
 - Microverse
 - The Odin Project
-- [Nelson Sakwa for the design inspiration](https://www.behance.net/sakwadesignstudio)
+- [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) for the design inspiration
 - [Damien](https://github.com/dkan), [Albert](https://github.com/albertpadin), [Paolo](https://www.linkedin.com/in/paolo-samontanez/), [Mkrtich](https://github.com/MkrtichSargsyan/), and [Chad](https://github.com/somoye123/) for the support. :heart:
 
 
