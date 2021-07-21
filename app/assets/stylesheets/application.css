@@ -34,9 +34,9 @@ input[type="submit"] {
   border-radius: 50px;
 }
 
-input[type="submit"]:outline {
+/* input[type="submit"]:outline {
   background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
-}
+} */
 
 input[type="file"] {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
