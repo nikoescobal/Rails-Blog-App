@@ -42,9 +42,13 @@ input[type="file"] {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.alert {}
+.alert {
+  cursor: pointer;
+}
 
-.notice {}
+.notice {
+  cursor: pointer;
+}
 
 /* .article-show {
   background-position: center;
