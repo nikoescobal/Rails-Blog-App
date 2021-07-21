@@ -42,27 +42,10 @@ input[type="file"] {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.alert {}
+.alert {
+  cursor: pointer;
+}
 
-.notice {}
-
-/* .article-show {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100%;
-} */
-
-/* .index-images {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 250px;
-} */
-
-/* .category-images {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 280px;
-} */
+.notice {
+  cursor: pointer;
+}
