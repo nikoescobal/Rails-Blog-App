@@ -14,6 +14,7 @@
     "tailwindcss": "^2.2.7",
     "turbolinks": "^5.2.0",
     "webpack": "^4.46.0",
+    "babel-loader": "^8.2.2",
     "webpack-cli": "^3.3.12"
   },
   "version": "0.1.0",
@@ -21,6 +22,7 @@
     "@babel/core": "^7.14.8",
     "@babel/node": "^7.14.7",
     "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-transform-regenerator": "^7.14.5",
     "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.14.8",
@@ -35,5 +37,8 @@
   },
   "scripts": {
     "heroku-prebuild": "yarn"
+  },
+  "resolutions": {
+    "babel-loader": "8.1.0"
   }
 }
