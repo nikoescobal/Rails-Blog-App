@@ -3,10 +3,10 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import {$,jQuery} from 'jquery';
-// export for others scripts to use
-window.$ = $;
-window.jQuery = jQuery;
+// import {$,jQuery} from 'jquery';
+// // export for others scripts to use
+// window.$ = $;
+// window.jQuery = jQuery;
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
@@ -29,7 +29,7 @@ window.onload = function () {
   });
 };
 
-$(document).on('turbolinks:load', function () {
-  $(".notice").delay(3000).fadeOut(1000);
-  $(".alert").delay(3000).fadeOut(1000);
-});
+// $(document).on('turbolinks:load', function () {
+//   $(".notice").delay(3000).fadeOut(1000);
+//   $(".alert").delay(3000).fadeOut(1000);
+// });
