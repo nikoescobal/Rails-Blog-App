@@ -8,6 +8,7 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use postgres
 gem 'pg'
 gem 'rails_12factor', group: :production
+gem 'rails_serve_static_assets', '~> 0.0.5'
 # Use devise
 gem 'devise'
 # Use Puma as the app server
