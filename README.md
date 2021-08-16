@@ -35,7 +35,8 @@ Check out my video presentation [here](https://www.loom.com/share/78f4ca36d77f4e
 - JavaScript
 - Tailwind
 - HTML 
-- CSS/SCSS
+- CSS
+- SCSS/Sass
 - JQuery
 - Lots of :heart: 
 

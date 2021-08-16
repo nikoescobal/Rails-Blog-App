@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  </head>
-  <body class="flex flex-col min-h-screen">
-    <%= render 'layouts/header', locals: {categories:@categories} %>
-    <%= render "shared/flash_notice" %>
-    <%= yield %>
-    <%= render 'layouts/footer' %>
-  </body>
-</html>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <body class="flex flex-col min-h-screen">
+      <%= render 'layouts/header', locals: {categories:@categories} %>
+      <%= render "shared/flash_notice" %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </body>
+  </html>
